@@ -3,6 +3,7 @@
 RED(RNA Editing Detector) is a program to detect and visualize RNA editing events at genomic scale using next-generation sequencing data. RNA editing is one of the post- or co-transcriptional processes with modification of RNA nucleotides from their genome-encoded sequence. In human, RNA editing event occurs mostly by deamination of adenosine to inosine (A-to-I) conversion through ADAR enzymes. 
 
 The main characteristics of this software are:
+
 1. Do Denovo or Non-Denovo detection of RNA editing, while the former just uses RNA vcf file and the latter uses both RNA vcf file and DNA vcf file;
 2. Visualization of annotated genome with Reference Genes from UCSC and Reference Sequence from fasta file;
 3. Visualization of imported mapped raw data (bam/sam etc.) with genome scale and chromosome scale;
