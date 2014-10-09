@@ -1,1229 +1,1231 @@
-<!DOCTYPE HTML>
-<html lang="zh-cn">
-<head>
-<title>RED</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<META content="text/html; charset=utf-8" http-equiv="Content-Type">
-<!-- Bootstrap -->
-<link rel="stylesheet"
-	href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<!-- Optional Bootstrap Theme -->
-<link href="data:text/css;charset=utf-8,"
-	data-href="http://cdn.bootcss.com/bootstrap/css/bootstrap-theme.min.css"
-	rel="stylesheet" id="bs-theme-stylesheet">
-<!-- Favicons -->
-<link rel="apple-touch-icon-precomposed"
-	href="/apple-touch-icon-precomposed.png">
-<link rel="icon" href="/favicon.ico">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<style type="text/css">
-/* Custom Styles */
-ul.nav-tabs.affix {
-	top: 30px; /* Set the top position of pinned element */
-	width: 170px;
-}
-
-p,ul {
-	font-family: Times New Roman;
-	font-size: 18px;
-}
-
-img {
-	display: block;
-	margin: auto;
-}
-
-.imgname {
-	text-align: center;
-	font-family: Times New Roman;
-	font-size: 15px;
-	font-style: italic;
-}
-</style>
-</head>
-
-<body>
-	<!-- 页面顶端 -->
-	<div class="navbar navbar-inverse " role="navigation">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="https://github.com/iluhcm/REDetector">RNA Editing Detector</a>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="container">
-
-		<!-- 项目描述 -->
-		<div class="jumbotron">
-			<div class="container">
-				<h2>RED---RNA Editing Detector</h2>
-				<h5>A program to detect and visualize RNA editing events at the
-					genomic scale using next-generation sequencing (NGS) data</h5>
-				<p>
-					<a class="btn btn-lg btn-success"
-						href="https://github.com/iluhcm/REDetector" role="button">Download</a>
-				</p>
-			</div>
-		</div>
-
-		<!-- 分栏 -->
-		<div class="row">
-			<!-- 分栏 索引列表 -->
-			<div class="col-md-2">
-				<ul class="nav nav-tabs nav-stacked" data-spy="affix"
-					data-offset-top="125">
-					<div class="panel-group" id="accordion">
-						<div class="panel panel-default">
-							<div onmouseover=show(1); onmouseout=hide(1); id="panel1" class="panel-heading">
-								<h4 class="panel-title">
-									<a href="#chapter1">1 Introduction</a>
-								</h4>
-							</div>
-							<div onmouseover=show(1); onmouseout=hide(1); id="collapse1" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5><a href="#section1.1">1.1 What is RED</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section1.2">1.2 Prerequisites</a>
-								  </h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section1.3">1.3 Installation</a>
-							      </h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section1.4">1.4 Terminology</a>
-								  </h5>
-								</div>
-							</div>
-						</div>
-
-						<div class="panel panel-default">
-							<div onmouseover=show(2); onmouseout=hide(2); id="panel2" class="panel-heading">
-								<h4 class="panel-title">
-									<a href="#chapter2">2 Getting Started</a>
-								</h4>
-							</div>
-							<div onmouseover=show(2); onmouseout=hide(2); id="collapse2" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5><a href="#section2.1">2.1 Starting a New Project</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section2.2">2.2 Opening an Existing Project</a></h5>
-								</div>
-							</div>
-						</div>
-
-						<div class="panel panel-default">
-							<div onmouseover=show(3); onmouseout=hide(3); id="panel3" class="panel-heading">
-								<h4 class="panel-title">
-									<a href="#chapter3">3 Visualization</a>
-								</h4>
-							</div>
-							<div onmouseover=show(3); onmouseout=hide(3); id="collapse3" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5><a href="#section3.1">3.1 Main Window</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section3.2">3.2 Toolbar Panel</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section3.3">3.3 Directory Panel</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section3.4">3.4 Genome Panel</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section3.5">3.5 Chromosome Panel</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section3.5">3.6 Status-bar Panel</a></h5>
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div onmouseover=show(4); onmouseout=hide(4); id="panel4" class="panel-heading">
-									<h4 class="panel-title">
-									<a href="#chapter4">4 Filter</a>
-								</h4>
-							</div>
-							<div onmouseover=show(4); onmouseout=hide(4); id="collapse4" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5><a href="#section4.1">4.1 Reference files used in filters</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section4.2">4.2	Denovo Mode</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section4.3">4.3	DNA-RNA Mode</a></h5>
-								</div>
-							</div>
-						</div>
-						<div class="panel panel-default">
-							<div onmouseover=show(5); onmouseout=hide(5); id="panel5" class="panel-heading">
-									<h4 class="panel-title">
-									<a href="#chapter5">5	Reports</a>
-								</h4>
-							</div>
-							<div onmouseover=show(5); onmouseout=hide(5); id="collapse5" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5><a href="#section5.1">5.1	Variant distribution (in a karyogram view)</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section5.2">5.2	Sites Distribution</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section5.3">5.3	Filter Reports</a></h5>
-								</div>
-							</div>
-						</div>
-                        
-                      <div class="panel panel-default">
-							<div onmouseover=show(6); onmouseout=hide(6); id="panel6" class="panel-heading">
-									<h4 class="panel-title">
-									<a href="#chapter6">6	Saving Data</a>
-								</h4>
-							</div>
-							<div onmouseover=show(6); onmouseout=hide(6); id="collapse6" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5><a href="#section6.1">6.1	Saving a Project</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section6.2">6.2	Saving Images</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section6.3">6.3	Saving Text</a></h5>
-								</div>
-							</div>
-						</div>  
-                        
-                       <div class="panel panel-default">
-							<div onmouseover=show(7); onmouseout=hide(7); id="panel7" class="panel-heading">
-									<h4 class="panel-title">
-									<a href="#chapter7">7	Configuration</a>
-								</h4>
-							</div>
-							<div onmouseover=show(7); onmouseout=hide(7); id="collapse7" class="panel-collapse collapse">
-								<div class="panel-body">
-									<h5><a href="#section7.1">7.1	RED Preferences</a></h5>
-								</div>
-								<div class="panel-body">
-									<h5><a href="#section7.2">7.2	Memory Settings </a></h5>
-								</div>
-								
-							</div>
-						</div>  
-                        
+  <!DOCTYPE HTML>
+  <html lang="zh-cn">
+  <head>
+  <title>RED</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <META content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <!-- Bootstrap -->
+  <link rel="stylesheet"
+      href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet"
+      href="http://cdn.bootcss.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  <!-- Optional Bootstrap Theme -->
+  <link href="data:text/css;charset=utf-8,"
+      data-href="http://cdn.bootcss.com/bootstrap/css/bootstrap-theme.min.css"
+      rel="stylesheet" id="bs-theme-stylesheet">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed"
+      href="/apple-touch-icon-precomposed.png">
+  <link rel="icon" href="/favicon.ico">
+  <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <style type="text/css">
+  /* Custom Styles */
+  ul.nav-tabs.affix {
+      top: 30px; /* Set the top position of pinned element */
+      width: 170px;
+  }
+  
+  p,ul {
+      font-family: Times New Roman;
+      font-size: 18px;
+  }
+  
+  img {
+      display: block;
+      margin: auto;
+  }
+  
+  .imgname {
+      text-align: center;
+      font-family: Times New Roman;
+      font-size: 15px;
+      font-style: italic;
+  }
+  </style>
+  </head>
+  
+  <body>
+      <!-- 页面顶端 -->
+      <div class="navbar navbar-inverse " role="navigation">
+          <div class="container">
+              <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed"
+                      data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span> <span
+                          class="icon-bar"></span> <span class="icon-bar"></span> <span
+                          class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="https://github.com/iluhcm/REDetector">RNA Editing Detector</a>
+              </div>
+          </div>
+      </div>
+  
+  
+      <div class="container">
+  
+          <!-- 项目描述 -->
+          <div class="jumbotron">
+              <div class="container">
+                  <h2>RED---RNA Editing Detector</h2>
+                  <h5>A program to detect and visualize RNA editing events at the
+                      genomic scale using next-generation sequencing (NGS) data</h5>
+                  <p>
+                      <a class="btn btn-lg btn-success"
+                          href="https://github.com/iluhcm/REDetector" role="button">Download RED</a>
+                		<a class="btn btn-lg btn-success"
+                          href="http://iluhcm.github.io/RED_Help_Content_v0.0.1.docx" role="button">Download Help Content</a>
+                  </p>
+              </div>
+          </div>
+  
+          <!-- 分栏 -->
+          <div class="row">
+              <!-- 分栏 索引列表 -->
+              <div class="col-md-2">
+                  <ul class="nav nav-tabs nav-stacked" data-spy="affix"
+                      data-offset-top="125">
+                      <div class="panel-group" id="accordion">
+                          <div class="panel panel-default">
+                              <div onmouseover=show(1); onmouseout=hide(1); id="panel1" class="panel-heading">
+                                  <h4 class="panel-title">
+                                      <a href="#chapter1">1 Introduction</a>
+                                  </h4>
+                              </div>
+                              <div onmouseover=show(1); onmouseout=hide(1); id="collapse1" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                      <h5><a href="#section1.1">1.1 What is RED</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section1.2">1.2 Prerequisites</a>
+                                    </h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section1.3">1.3 Installation</a>
+                                    </h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section1.4">1.4 Terminology</a>
+                                    </h5>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <div class="panel panel-default">
+                              <div onmouseover=show(2); onmouseout=hide(2); id="panel2" class="panel-heading">
+                                  <h4 class="panel-title">
+                                      <a href="#chapter2">2 Getting Started</a>
+                                  </h4>
+                              </div>
+                              <div onmouseover=show(2); onmouseout=hide(2); id="collapse2" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                      <h5><a href="#section2.1">2.1 Starting a New Project</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section2.2">2.2 Opening an Existing Project</a></h5>
+                                  </div>
+                              </div>
+                          </div>
+  
+                          <div class="panel panel-default">
+                              <div onmouseover=show(3); onmouseout=hide(3); id="panel3" class="panel-heading">
+                                  <h4 class="panel-title">
+                                      <a href="#chapter3">3 Visualization</a>
+                                  </h4>
+                              </div>
+                              <div onmouseover=show(3); onmouseout=hide(3); id="collapse3" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                      <h5><a href="#section3.1">3.1 Main Window</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section3.2">3.2 Toolbar Panel</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section3.3">3.3 Directory Panel</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section3.4">3.4 Genome Panel</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section3.5">3.5 Chromosome Panel</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section3.5">3.6 Status-bar Panel</a></h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="panel panel-default">
+                              <div onmouseover=show(4); onmouseout=hide(4); id="panel4" class="panel-heading">
+                                      <h4 class="panel-title">
+                                      <a href="#chapter4">4 Filter</a>
+                                  </h4>
+                              </div>
+                              <div onmouseover=show(4); onmouseout=hide(4); id="collapse4" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                      <h5><a href="#section4.1">4.1 Reference files used in filters</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section4.2">4.2	Denovo Mode</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section4.3">4.3	DNA-RNA Mode</a></h5>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="panel panel-default">
+                              <div onmouseover=show(5); onmouseout=hide(5); id="panel5" class="panel-heading">
+                                      <h4 class="panel-title">
+                                      <a href="#chapter5">5	Reports</a>
+                                  </h4>
+                              </div>
+                              <div onmouseover=show(5); onmouseout=hide(5); id="collapse5" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                      <h5><a href="#section5.1">5.1	Variant distribution (in a karyogram view)</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section5.2">5.2	Sites Distribution</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section5.3">5.3	Filter Reports</a></h5>
+                                  </div>
+                              </div>
+                          </div>
+                          
                         <div class="panel panel-default">
-							<div onmouseover=show(8); onmouseout=hide(8); id="panel8" class="panel-heading">
-									<h4 class="panel-title">
-									<a href="#chapter8">8	Reporting Bugs</a>
-								</h4>
-							</div>
-						</div>   
-                           
+                              <div onmouseover=show(6); onmouseout=hide(6); id="panel6" class="panel-heading">
+                                      <h4 class="panel-title">
+                                      <a href="#chapter6">6	Saving Data</a>
+                                  </h4>
+                              </div>
+                              <div onmouseover=show(6); onmouseout=hide(6); id="collapse6" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                      <h5><a href="#section6.1">6.1	Saving a Project</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section6.2">6.2	Saving Images</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section6.3">6.3	Saving Text</a></h5>
+                                  </div>
+                              </div>
+                          </div>  
+                          
                          <div class="panel panel-default">
-							<div onmouseover=show(9); onmouseout=hide(9); id="panel9" class="panel-heading">
-									<h4 class="panel-title">
-									<a href="#chapter9">9	Credits</a>
-								</h4>
-							</div>
-						</div>     
-                        
-					</div>
-				</ul>
-			</div>
-
-			<!-- 分栏 内容主体 -->
-			<div class="col-md-10"
-				style="padding-left: 40px;padding-right: 20px;">
-				<div class="bs-docs-section">
-					<!-- 第一章 -->
-					<h1 id="chapter1" class="page-header">1 Introduction</h1>
-					<h3 id="section1.1">1.1 What is RED</h3>
-					<p>RNA editing is one of the post- or co-transcriptional
-						processes with modification of RNA nucleotides from their
-						genome-encoded sequence. In human, RNA editing event occurs mostly
-						by deamination of adenosine to inosine (A-to-I) conversion through
-						ADAR enzymes.</p>
-				  <p>RED (RNA Editing Detector) is a program to detect and
-						visualize RNA editing events at the genomic scale using
-						next-generation sequencing (NGS) data. The software intergrates
-						multiple steps to filter spurisous variant sites, and then
-						performs formal statistical tests to identify reliable RNA editing
-						sites. A potential RNA editing site can be visualized in the
-						context of reference genome (/gene).</p>
-					<img src="img/fig.1.1.png" alt="" height=603 width=911 />
-					<p class="imgname">Fig. 1.1 A screen shot of RED</p>
-					<p>RED is a Java-based program with Graphic User Interface
-						(GUI), which works on mainstream operating systems (e.g., Windows,
-						Linux and Mac OS X). To make it more efficient, everlasting and
-						faster-saving, we use MySQL database management system (DBMS) in
-						manuplicating huge NGS data. In addition, we use
-						functions in <em>R</em> to perform statistical
-						analysis. However, you'll never manipulate R and MySQL when you
-						use RED. All of the operation relative to <em>R</em> and MySQL is
-						completed by RED automatically. RED enables the analysis of RNA
-						editing events at two levels (illustrated below) using VCF files
-						from different sources and the presentation of full mapped
-						sequence data using BAM/SAM file:</p>
-					<ul>
-						<li>Detection of RNA editing sites using RNA-seq data alone
-							(i.e., <em>De Novo</em> identification)</li>
-						<li>Detection of RNA editing sites using both DNA-seq
-							data (e.g., whole exome sequencing) and RNA-Seq data</li>
-					</ul>
-					<h3 id="section1.2">1.2 Prerequisites</h3>
-					<ul>
-						<li>Java Runtime Environment (jdk 1.7.0_21 or later)</li>
-						<li>MySQL Database Management System (MySQL 5.6.19 or later)</li>
-						<li>R Environment (R 3.1.1 or later)</li>
-					</ul>
-					<h3 id="section1.3">1.3 Installation</h3>
-					<h4>1.3.1 Install Java Runtime Environment</h4>
-					<p>Java Runtime Environment (JRE) is basically the Java Virtual
-						Machine (JVM) where your Java programs run on. It also includes
-						browser plugins for Applet execution. Java Development Kit (JDK)
-						is the full featured Software Development Kit (SDK) for Java,
-						including JRE, and the compilers and tools (e.g., JavaDoc, and
-						Java Debugger) to create and compile programs. In order to run
-						RED, we need to install either JRE or JDK.</p>
-					<ul>
-						<li>JDK:</li>
-						<p>
-							<a href="URI">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a>
-						</p>
-						<li>JRE:</li>
-						<p>
-							<a href="URI">http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html</a>
-						</p>
-					</ul>
-					<h4>1.3.2 Install MySQL Database</h4>
-					<p>RED stores almost all data into database so that we can reuse the
-						data for research. MySQL is one of the best choice since it is
-						free and efficient. Install MySQL database with the following download page.</p>
-					<ul>
-						<li>MySQL:</li>
-						<p>
-							<a href="URI">http://dev.mysql.com/downloads/mysql/</a>
-						</p>
-					</ul>
-					<p>Although default configuration in MySQL can ensure your server works well, you could edit the configure file to gain better performance. For Linux System, edit the parameters in the file of /etc/my.cnf (default configuration path). For Windows System, you could use <a href="http://dev.mysql.com/downloads/workbench/"><em>MySQL Workbench</em></a> to configure your server efficiently.</p>
-					
-					<h4>1.3.3 Install <i>R</i> Environment
-					</h4>
-
-					<p><em>R</em> is a free software environment for statistical computing
-						and graphics. It compiles and runs on a wide variety of UNIX
-						platforms, Windows and MacOS. To download <em>R</em>, please choose your
-						preferred<em> <a href="http://cran.r-project.org/mirrors.html">CRAN mirror</a></em><a href="http://cran.r-project.org/mirrors.html"></a>. </p>
-					<p>The package of “rJava” in <em>R</em> is required,
-						which ensures connection between <em>R</em> and Java. Open a <em>R</em> Window and
-						type:</p>
-					<p>
-						<code>
-							<i>install.packages(rJava)</i>
-						</code>
-					</p>
-					<p>The package will be installed automatically with Internet
-						connection.</p>
-					<ul>
-						<li><em>R</em>:</li>
-						<p>
-							<a href="URI">http://www.r-project.org/</a>
-						</p>
-					</ul>
-					<h3 id="section1.4">1.4 Terminology</h3>
-					<p>Several terms are used throughout the RED documentation and program. To make it more easier to be understood, we have a simple introduction.</p>
-					<h4>1.4.1 Molecular Biology</h4>
-					<ul>
-						<li><strong>RNA Editing</strong></li>
-					</ul>
-					<p>RNA editing is one of the post- or co-transcriptional
-						processes with modification of RNA nucleotides from their
-						genome-encoded sequence.</p>
-					<ul>
-						<li><strong>Reference Genome</strong></li>
-					</ul>
-					<p>Reference genome is a comprehensive, integrated,
-						non-redundant, well-annotated set of reference sequences including
-						genomic, transcript, and protein (hg19).</p>
-					<ul>
-						<li><strong>Sequence Alignment Map (<i>.bam/.sam</i>) File
-						</strong></li>
-					</ul>
-					<p>SAM format is a text format for storing sequence data in a
-						series of tab delimited ASCII columns, while BAM format stores the
-						same data in a compressed, indexed, binary form.</p>
-					<ul>
-						<li><strong>Variant Calling Format (<i>.vcf</i>) File
-						</strong></li>
-					</ul>
-					<p>VCF is a text file format (most likely stored in a
-						compressed manner) which contains meta-information lines, a header
-						line, and then data lines each containing information about a
-						position in the genome.</p>
-
-					<h4>1.4.2 Program</h4>
-					<ul>
-						<li><strong>Data Set</strong></li>
-					</ul>
-					<p>A data set stores a set of data, which is imported from a
-						single file. It is an efficient way to be handled and presented.
-						In program, a data set refers to a BAM/SAM file that contains
-						sequence alignment/map information, which is displayed in the
-						context of reference sequence.</p>
-					<ul>
-						<li><strong>Data Group</strong></li>
-					</ul>
-					<p>A data group contains two or more data sets with different
-						biological conditions to make it compared for some purposes (e.g.,
-						comparing RNA editing sites identified in cancer tissues and
-						adjacent normal tissues). In a given data group, we aggregate data
-						sets needed for research and save the results of comparison. This
-						function has not completely worked , and we will try our best to
-						make it come true in the next version.</p>
-					<ul>
-						<li><strong>Data Store</strong></li>
-					</ul>
-					<p>A data store refers to either a data set or a data group.
-						Most analyses and visualizations in RED operate on data stores and
-						they work equally well with either data sets or data groups.</p>
-					<ul>
-						<li><strong>Probe/ProbeBean</strong></li>
-					</ul>
-					<p>
-						A probe represents a potential RNA-editing site which contains
-						basic information (e.g., coordinate, reference base and editing base), while a
-						probe bean contains all information derived from <i>.vcf</i> file.
-					</p>
-					<ul>
-						<li><strong>Probe Set</strong></li>
-					</ul>
-					<p>A probe set stores all probes from an initial vcf file,
-						namely stores all RNA-editing sites without using any filter. It
-						is also the root of a pipeline tree when executing any filter to
-						the original probe set. The probe set is produced when a vcf file
-						has been input into database.</p>
-					<ul>
-						<li><strong>Probe List</strong></li>
-					</ul>
-					<p>A probe list is a subset of the probe set. Probe lists are
-						generated by one or more filters implemented in RED, which store
-						the remaining editing sites after filteration. However, we can
-						produce probe lists from another probe list which had executed one
-						or more filters.</p>
-					<!-- 第二章 -->
-					<h1 id="chapter2" class="page-header">2 Getting Started</h1>
-					<h3 id="section2.1">2.1 Starting a New Project</h3>
-					<p>Before starting a new project, make sure that you have
-						configured all running environments mentioned in the <a href="#section1.2"><em>Prerequisites</em></a> section. You can either select a genome or connect to MySQL
-						database when starting a new project, but both should be performed
-						to make the program work properly.</p>
-					<h4>2.1.1 Select a Genome</h4>
-					<p>
-						To start a new project, you may first select a new genome of
-						interest. When the program is open, select <em>File &gt; New
-							Project…</em> to select a new genome. If there isn't any genome file
-						in the local host, a warning notification will pop up as the
-						following illustrated and tell you what you should do.
-					</p>
-					<img src="img/fig.2.1.png" alt="" height=135 width=699>
-					<p class="imgname">Fig. 2.1 Warning when there is no genome in
-						genome directory</p>
-					<p>If you choose to download a new genome, click Import New
-						button and find out the new genome you need.</p>
-					<img src="img/fig.2.2.png" alt="" height=340px width=380px />
-					<p class="imgname">Fig. 2.2 Select a new genome to download</p>
-					<p>After the download completes, the following dialog of
-						<em>Select Genome…</em> will pop up.</p>
-					<img src="img/fig.2.3.png" alt="" height=335 width=383 />
-					<p class="imgname">Fig. 2.3 Select a new genome to import</p>
-					<p>It is noteworthy that it may take a little bit longer when
-						importing genome data into RED for the first time. We have a cache
-						mechanism to make it faster when you reload the same genome. Once
-						you have selected your genome and it has been loaded, you can move
-						on to the next step.</p>
-					<h4>2.1.2 Connecting to MySQL Database</h4>
-					<p>
-						A simple database connection dialog will pop up when you select <em>File
-						  &gt; Connect to MySQL…</em> as following illustrated.
-					</p>
-					<img src="img/fig.2.4.png" alt="" height=300px width=300px />
-					<p class="imgname">Fig. 2.4 Connect to MySQL DBMS</p>
-					<p>With successful connection, the program will detect whether
-						there is an database with imported data before and then make a
-						relevant notification for the next step.</p>
-					<ul>
-						<li><strong>Null in Database</strong></li>
-					</ul>
-					<p>If the database is empty (or null), the program will tell
-						what you need to prepare for data import.</p>
-					<img src="img/fig.2.5.png" alt="" height=399px width=498px />
-					<p class="imgname">Fig. 2.5 Data import notification</p>
-					<img src="img/fig.2.6.png" alt="" name="fig_2_6" width=600px height=300px id="fig_2_6" />
-					<p class="imgname">Fig. 2.6 Data import dialog</p>
-					<p>A simple explanation for each kind of importing file was
-						shown. It helps you locate what kind of data file should be
-						imported when you select browse button.</p>
-					<img src="img/fig.2.7.png" alt="" height=299 width=595 />
-					<p class="imgname">Fig. 2.7 Importing data</p>
-					<p>After selecting all paths, press <em>Import</em> button and wait for a moment, all data will be imported to database.</p>
-					<ul>
-					  <li><strong>Data Which Don't Meet Your Demand in Database</strong></li>
-				  </ul>
-					<p>
-						After database is connected using database connection panel, <i><a href="#fig_2_6">Fig.
-							2.6</a></i> is present by selecting <em>File &gt; Import Data &gt;
-					  Database…</em> and you can import another data for further demand.
-					</p>
-					<ul>
-						<li><strong>Data Which Meets Your Demand in Database</strong></li>
-					</ul>
-					<img src="img/fig.2.8.png" alt="" height=402px width=500px />
-					<p class="imgname">Fig. 2.8 Notification of successful database
-						connection and data loaded to database</p>
-					<p>If data have been loaded into database system, then you can
-						filter spurisous variants for detecting potential RNA-editing
-						sites.</p>
-					<h4>2.1.3 Loading a BAM/SAM File (using both RNA-Seq and
-						DNA-sequencing data; or only RNA-Seq data)</h4>
-					<p>In order to make a full landscape of all potential
-						RNA-editing sites at the genomic scale, the sequence alignment/map
-						file (BAM/SAM), as well as variant calling format file (VCF),
-						which has been imported to database, is needed. All potential
-						RNA-editing sites will be shown in <a href="#section3.5"><em>Chromosome Panel</em></a>. The program
-						only supports paired-end reads in the current release.</p>
-					<p>The SAM/BAM format has been well defined in <a href="#section1.4"><em>Terminology</em></a> section. We provided an option dialog to help import BAM/SAM data
-						so you don't need to specify much information.</p>
-					<img src="img/fig.2.9.png" alt="" height=400px width=400px />
-					<p class="imgname">Fig. 2.9 An option dialog for importing
-						BAM/SAM file</p>
-					<ul>
-						<li><strong>Remove duplicate reads</strong></li>
-					</ul>
-					<p>Removing duplicate reads (reads of the same length and
-						sequence identity) is a widely used practice to correct bias when
-						analyzing NGS data. Tick if you want to remove. We strongly
-						recommend you remove them because it may influence the result of
-						coverage.</p>
-					<ul>
-						<li><strong>Minimal mapping quality</strong></li>
-					</ul>
-					<p>Control the minimum mapping quality when importing data. You
-						can choose to filter some reads in <a href="#section3.5"><em>Chromosome Panel</em></a> when importing
-						data based on their mapping quality scores. The quality score
-						ranges from 0 to 255 (with higher scores being better), and if you
-						set a filter value then only mapped reads with a score above this
-						value will be imported. Not all read mappers will include a score
-						value so depending on where the file you are importing came from
-						this option may have no effect.</p>
-
-					<h4>2.1.4 Setting filters</h4>
-					<p>Eight kinds of filters have been provided in RED, see
-						<a href="#chapter4"><em>Filters</em></a> section for more detail. Before setting filters, database
-						must be connected successfully. An initial set of RNA-editing
-						sites (ProbeSet) will be present as a root tree named All Probes
-						within <a href="#section3.3"><em>Directory Panel</em></a>. When one filter is executed, a leaf
-						connected to this tree will be generated associated with the
-						remaining RNA-editing sites.</p>
-					<p>For the tested data, we have imported BJ22.RNA.chr8.snvs.vcf
-						and BJ22.RNA.chr8.snvs.bam file into database which has 9530
-						candidate RNA-editing sites.</p>
-					<img src="img/fig.2.10.png" alt="" height=189px width=274px />
-					<p class="imgname">Fig. 2.10 RNA-seq data and potential RNA
-						editing sites within Directory Panel</p>
-					<p>Then we execute the <em><a href="#section4.2.2">Basic Filter</a></em> with quality greater than
-						20 and coverage greater than 6.</p>
-					<img src="img/fig.2.11.png" alt="" height=250px width=400px />
-					<p class="imgname">Fig. 2.11 Basic Filter options</p>
-					<p>After filteration (for a few seconds), there is a subset of
-						editing sites remained and a leaf will be produced within
-						Directory Panel to describe and check what you have filtered out
-						as illustrated below. At the same time, the Genome Panel and
-						Chromosome Panel will present the RNA-editing sites by different
-						colours.</p>
-					<img src="img/fig.2.12.png" alt="" height=194px width=276px />
-					<p class="imgname">Fig. 2.12 After executing basic filter, a
-						probe list is generated</p>
-					<h4>2.1.5 Reports</h4>
-					<p>For now, we only support exporting editing sites information
-						in text format. In the <a href="#section3.3"><em>Directory Panel</em></a>, right-click the probe list
-						which you want to export, and select <em>Show Sites List</em>, <em>Show Sites
-						Distribution</em> or <em>Show Variant Distribution</em> to make a report. Please
-						see <a href="#section3.3.3"><em>Probe Set and Probe Lists</em></a> section for more details.</p>
-					<h3 id="section2.2">2.2 Opening an Existing Project</h3>
-					<p>
-						To open an existing project, select <i>File &gt; Open Project</i>
-						from the main menu. All RED project files use a .red file
-						extension. A RED project stores all of the Data Set, Data Group,
-						Probe Set and Probe List information for your project. It also
-					remembers which data tracks were visible. See <em><a href="#section6.1">Saving a Project</a></em> section for more details. </p>
-					<p>Although it stores the name of the genome you were using, it
-						doesn't contain the actual genome data. If you are using RED on a
-						new machine, it will automatically download and install the
-						required genome when you open a project file. If you want to use
-						RED when not connected to a network, you need to ensure that the
-						correct genome has been installed locally. Once downloaded,
-						genomes will be cached on your machine for future use.</p>
-					<!-- 第三章 -->
-					<h1 id="chapter3" class="page-header">3 Visualisation</h1>
-					<p>The main window consists of <em>Toolbar Panel</em>, <em>Directory Panel</em>,
-						<em>Genome Panel</em>, <em>Feature Panel</em>, <em>Chromosome Panel</em> and <em>Status-bar
-						Panel</em>. Shown as following figures and table.</p>
-					<h3 id="section3.1">3.1 Main Window</h3>
-					<img src="img/fig.3.1.png" alt="" height=394 width=703>
-					<p class="imgname">Fig. 3.1 Main window</p>
-					<table border="1" align="center">
-						<Caption>
-							<i>Table 1. Panel Explanation</i>
-						</Caption>
-						<tr>
-							<th>Panel</th>
-							<th>Explanation</th>
-						</tr>
-						<tr>
-							<td>1</td>
-							<td>Toolbar Panel</td>
-						</tr>
-						<tr>
-							<td>2</td>
-							<td>Directory Panel</td>
-						</tr>
-						<tr>
-							<td>3</td>
-							<td>Genome Panel</td>
-						</tr>
-						<tr>
-							<td>4</td>
-							<td>Feature Panel</td>
-						</tr>
-						<tr>
-							<td>5</td>
-							<td>Chromosome Panel</td>
-						</tr>
-						<tr>
-							<td>6</td>
-							<td>Status-bar Panel</td>
-						</tr>
-					</table>
-					<h3 id="section3.2">3.2 Toolbar Panel</h3>
-					<img src="img/fig.3.2.png" alt="" height=55px width=467px>
-					<p class="imgname">Fig. 3.2 Toolbar panel</p>
-					<p>The toolbar is a convenient way to access commonly used
-						functions, which you can also access via the main menu or keyboard
-						shortcuts.</p>
-					<ul>
-						<li><img src="img/fig.3.2.1.png" alt=""
-							width=131px height=50px align="left"></li>
-					</ul>
-					<p>&nbsp;</p>
-					<p>These buttons allow you to change the data tracks between
-						showing just reads, just probes or both reads and probes</p>
-					<ul>
-					  <li><img src="img/fig.3.2.2.png" alt=""
-							width=45px height=49px align="left"></li>
-					</ul>
-					<p>&nbsp;</p>
-					<p>This lets you change the data zoom level</p>
-					<ul>
-					  <li><img src="img/fig.3.2.3.png" alt=""
-							width=84px height=44px align="left"></li>
-					</ul>
-					<p>&nbsp;</p>
-					<p>These buttons bring up either the Find Feature, or Goto
-						Position search tools</p>
-					<ul>
-					  <li><img src="img/fig.3.2.4.png" alt=""
-							width=201px height=51px align="left"></li>
-					</ul>
-					<p>&nbsp;</p>
-					<p>Drag the tag and change the data zoom level.</p>
-					<h3 id="section3.3">3.3 Directory Panel</h3>
-					<p>The directory panel gives you a quick overview of your
-						<em>Annotation sets</em>, <em>Data Sets</em>, <em>Data Groups</em>, <em>Probe Set</em> and <em>Probe
-						Lists</em>.</p>
-					<img src="img/fig.3.3.png" alt="" height=248px width=331px>
-					<p class="imgname">Fig. 3.3 Directory panel</p>
-					<p>The view consists of a set of folders which can be expanded
-						or collapsed either by double clicking them or by clicking on the
-						little + or - symbols which may appear next to them.</p>
-					<h4>3.3.1 Data Sets and Data Groups</h4>
-					<p>As well as seeing your Data Sets and Data Groups you can
-						also use the data view to perform operation on them.</p>
-					<p>If you click on any DataStore entry in the <a href="#section3.3"><em>Directory Panel</em></a>,
-						you will see it become highlighted. If that DataStore is currently
-						visible in the Chromosome Viewer then it will have a red line at
-						the top and bottom of the track so you can quickly see where it
-						is.</p>
-					<p>If you right click (or Apple+click) on any DataStore you
-						will see a popup menu of options appear.</p>
-					<img src="img/fig.3.4.png" alt="" height=242px width=331px>
-					<p class="imgname">Fig. 3.4 Popup menu of DataSet</p>
-					<p>The options are:</p>
-					<ul>
-						<li><strong>Show Track in Chromosome View</strong></li>
-					</ul>
-					<p>
-						This is a toggle option to turn a track on or off in the chr view.
-						If the track is currently visible you will see a tick next to this
-						option. New tracks are added a the end of the current set of
-						tracks. For more flexible options for adding/removing tracks use
-						the <i>View &gt; Set Data Tracks</i> option in the main menu.
-					</p>
-					<ul>
-						<li><strong>Rename</strong></li>
-					</ul>
-					<p>This allows you to change the name of this Data Store.</p>
-					<ul>
-						<li><strong>Delete</strong></li>
-					</ul>
-					<p>You can delete this data store (not allowed for Data Sets).</p>
-					<ul>
-						<li><strong>Properties</strong></li>
-					</ul>
-					<p>This shows basic information about your data store,
-						including name, file path, total reads, number of positive reads
-						and negative reads, etc.</p>
-					<h4>3.3.2 Annotation Sets</h4>
-					<p>The annotation sets folder will only show you an entry for
-						the core genome annotations which come with each imported RED
-						genome. If you import extra annotation then this will show up in
-						this folder.</p>
-					<img src="img/fig.3.5.png" alt="" height=266px width=331px>
-					<p class="imgname">Fig. 3.5 Popup menu of AnnotationSet</p>
-					<p>Right-clicking on an entry in this folder brings up a popup
-						menu with the following options:</p>
-					<ul>
-						<li>Show Track in Chromosome View</li>
-					</ul>
-					<p>
-						This is a toggle option to turn a track on or off in the chr view.
-						If the track is currently visible you will see a tick next to this
-						option. You can also use <em>Edit &gt; Feature Panel</em> option in
-						the main menu.
-					</p>
-					<ul>
-						<li>Properties</li>
-					</ul>
-					<p>Brings up the number of features in each chromosome in this
-						annotation set.</p>
-					<ul>
-						<li>Rename</li>
-					</ul>
-					<p>Allows you to change the name of this annotation set.</p>
-					<ul>
-						<li>Delete</li>
-					</ul>
-					<p>You can delete this annotation from your project (not
-						allowed for Core Genome annotation).</p>
-					<h4 id="section3.3.3">3.3.3 Probe Set and Probe Lists</h4>
-					<p>
-						When you have imported a <i>.vcf</i> file called from the sequence
-						mapped data, the probe set will automatically be initialized and
-						named <i>All Probes</i>. After you implemented filters (no matter
-						one or more) to the probe set, then a probe list would be
-						generated to show filtering results.
-					</p>
-					<img src="img/fig.3.6.png" alt="" height=348px width=326px>
-					<p class="imgname">Fig. 3.6 Popup menu of ProbeLists</p>
-					<p>Right-clicking on an entry in this folder brings up a popup
-						menu with the following options:</p>
-					<ul>
-						<li><strong>Show Sites List</strong></li>
-					</ul>
-					<p>Shows all editing sites in a table with filtering
-						description and comments. The table consists of the following
-						information: chromosome, position, reference base and alternative
-						base.</p>
-					<ul>
-						<li><strong>Show Sites Distribution</strong></li>
-					</ul>
-					<p>
-						Shows all editing sites distribution in a histogram. See <i><a href="#section5.2">Sites
-							Distribution</a></i> section for more details.
-					</p>
-					<ul>
-						<li><strong>Show Variant Distribution</strong></li>
-					</ul>
-					<p>
-						Shows all variant type distribution in a histogram. See <i><a href="#section5.1">Variant
-							Distribution</a></i> section for more details.
-					</p>
-					<ul>
-						<li><strong>Rename</strong></li>
-					</ul>
-					<p>Allows you to change the name of this probe list (now allowed
-						for Probe Set).</p>
-					<ul>
-						<li><strong>Edit Comments</strong></li>
-					</ul>
-					<p>Allows you to edit comments of a probe list. It mainly
-						contains filtering information in default.</p>
-					<ul>
-						<li>Delete</li>
-					</ul>
-					<p>Deletes this annotation from your project (not allowed for
-						Probe Set)</p>
-					<h3 id="section3.4">3.4 Genome Panel</h3>
-					<p>The genome panel shows an overview of all chromosomes from
-						the reference genome. Once you have performed RNA editing filters,
-						it will show a whole genome view of the editing sites. We showed
-						the chromosomes in human only (chromosome 1 to 22, X, Y).</p>
-					<img src="img/fig.3.7.png" alt="" height=267 width=973>
-					<p class="imgname">Fig. 3.7 Genome panel before executing
-						filters</p>
-					<img src="img/fig.3.8.png" alt="" height=265 width=973>
-					<p class="imgname">Fig. 3.8 Genome panel with RNA-editing sites
-						highlighted</p>
-					<p>A karyogram view of all chromosomes was shown according to
-						their relative sizes. Each rectangle represents a chromosome. The
-						highlighted box shows a region currently being shown in the
-						chromosome view. You can use the genome view to move the
-						chromosome view to a different chromosome or to a different region
-						of current chromosome.</p>
-					<h3 id="section3.5">3.5 Chromosome Panel</h3>
-					<p>The chromosome panel is the most complex view in RED and is
-						also where you’re likely to pay the most of your attention to.
-						There are a lot of options for changing the information which it
-						showed to you.</p>
-					<img src="img/fig.3.9.png" alt="" name="fig_3_9" width=720 height=197 id="fig_3_9">
-					<p class="imgname">Fig. 3.9 The chromosome panel when current
-						track length is longer than screen pixel</p>
-					<p>The view is divided into several tracks. The top of the
-						display is a line of text which tells you which genome and
-						chromosome you are currently viewing. It also lists the current
-						position and provides the length of the current view.</p>
-					<p>Below the text line comes the core genome annotation feature
-						track which has a blue background, the sequence track which is
-						shown with specific status and below them is a set of data tracks
-						which have a white/grey background.</p>
-					<p>Finally at the bottom is a status bar which can display
-						various pieces of information, usually related to the data read
-						position which is currently under the mouse.</p>
-					<p>In the chromosome panel, you can left-click the mouse to
-						zoom in and right-click to zoom out. If you put your mouse over a
-						read it will turn yellow as shown follow.</p>
-					<h4 id="section3.5.1">3.5.1 Feature track</h4>
-					<p>The feature track mainly shows the feature from <a href="http://genome.ucsc.edu/cgi-bin/hgTables"><em>NCBI RefSeq
-						Genes</em></a>, which includes the information of transcription, coding
-						region and exons. Features in this track are coloured in blue.</p>
-					<img src="img/fig.3.10.png" alt="" height=35 width=721>
-					<p class="imgname">Fig. 3.10 Feature track with one complete
-						feature</p>
-					<p>The feature is represented as a filled block of colour.
-						There are three kinds of height in a feature. The most obslate
-						region stands for the transcribed region, the fattest region
-						stands for exons region within this feature, while the height
-						between transcription and exon is coding region.</p>
-					<p>If you put your mouse over a feature it will display the
-						feature name below the track. If you want to see more details
-						about the feature you can double-left-click on it and a feature
-						information window will open up.</p>
-					<img src="img/fig.3.11.png" alt="" height=300px width=550px>
-					<p class="imgname">Fig. 3.11 A popup dialog when clicking on
-						the feature</p>
-					<p>In this popup window, you can double-click on the location
-						to have an overview of this feature.</p>
-					<h4>3.5.2 Sequence Track</h4>
-				  <p>
-						The sequence track shows bases of reference genome generated from
-						a <i>.fasta</i> file(illustrated below), see <i>Real Base
-							Status</i> section for more details.
-					</p>
-					<img src="img/fig.3.12.png" alt="" height=14 width=964>
-					<p class="imgname">Fig. 3.12 Bases information of reference
-						genome</p>
-					<h4>3.5.3 Data Track</h4>
-					<p>Data tracks can show three kinds of information.</p>
-					<ul>
-						<li>The position of the individual mapped reads with block
-							status</li>
-						<li>The position of the individual mapped reads with real
-							base information</li>
-						<li>The position of RNA editing sites associated with mapped
-							reads</li>
-					</ul>
-					<p>It depends on the whole view length of screen whether it
-						displays with blocks or real base information. If the length is
-						longer than the screen pixel, then the mapped reads are displayed
-						with blocks. If the length is shorter, then there is enough space
-						to place the base name, so the mapped reads are displayed in its
-						real base name.</p>
-					<h4>3.5.3.1 Blocks Status</h4>
-				  <p>
-						RED shows sequence reads as gray blocks with the reads were
-						mapped/aligned with the reference genome. <i><a href="#fig_3_9">Fig. 3.9</a></i> and <a href="#fig_3_13"><em>the
-						following figure</em></a> show read as blocks status. The former view
-						length is 9.77 MB while the latter is 2.54KB (1MB = 1000 KB =
-					1000000 bp). </p>
-					<img src="img/fig.3.13.png" alt="" name="fig_3_13" width=720 height=198 id="fig_3_13">
-					<p class="imgname">Fig. 3.13 Block status in small areas</p>
-					<p>If you put your mouse over a read it will be highlighted in
-						yellow. The status bar at the bottom will show the details of the
-						position and length of the read.</p>
-					<h4>3.5.3.2 Real Base Status</h4>
-				  <p>In the real base status, the reference genome base and
-						mapped read base will appear in the same time. In order to
-						distinguish all bases, we show bases in different colours.</p>
-					<img src="img/fig.3.14.png" alt="" height=265 width=973>
-					<p class="imgname">Fig. 3.14 A given sequenced regions with
-						bases shown in different colors</p>
-					<ul>
-						<li>Green = 'A'</li>
-						<li>Black = 'G'</li>
-						<li>Blue = 'C'</li>
-						<li>Red = 'T'</li>
-					</ul>
-					<p>Thus, it is convenient to discover whether a position has
-						editing base and other editing information. We will provide more
-						editing information with the following RED version released.</p>
-					<h4>3.5.4 RNA Editing Sites Only</h4>
-					<p>We provide the RNA editing sites information when you choose
-						<em>Show only Probes</em> or <em>Show Reads and Probes</em>. We highlight the
-						position of a RNA editing site with different colours.</p>
-				  <ul>
-						<li>Green = 'G'-&gt;'A'</li>
-						<li>Black = 'A'-&gt;'G'</li>
-						<li>Blue = 'A'-&gt;'C'</li>
-						<li>Red = 'C'-&gt;'T'</li>
-					</ul>
-					<img src="img/fig.3.15.png" alt="" height=198 width=718>
-					<p class="imgname">Fig. 3.15 Show only Probes</p>
-					<img src="img/fig.3.16.png" alt="" height=197 width=720>
-					<p class="imgname">Fig. 3.16 Show Reads and Probes</p>
-					<h4>3.5.5 Change Data Tracks</h4>
-					<p>
-						You can change which data tracks are shown and the order of the
-						tracks by selecting <em>Edit &gt; Set Data Tracks</em>, or by using
-						the toolbar shortcut.
-					</p>
-					<img src="img/fig.3.17.png" alt="" height=400px width=600px>
-					<p class="imgname">Fig. 3.17 Select data tracks displayed on
-						the screen</p>
-					<p>The list of tracks on the right is the tracks which will be
-						displayed in the chromosome view. The lists on the left are tracks
-						which aren't currently being displayed. You can move tracks from
-						one side to another, and move the visible tracks up and down the
-						list to get the set you want.</p>
-					<p>Within the data track area you can mix DataSets and
-						DataStores however you wish. DataSets are shown with red names and
-						DataGroups with blue names.</p>
-					<p>In addition to the dialog for changing the displayed data
-						tracks you can also add and remove individual tracks by using the
-						popup menus available in the <a href="#section3.3"><em>Directory Panel</em></a>.</p>
-					<h3 id="section3.6">3.6 Status-bar Panel</h3>
-					<img src="img/fig.3.18.png" alt="" height=21px width=455px>
-					<p class="imgname">Fig. 3.18 The status bar</p>
-					<p>The status bar is a notification area which usually shows
-						relevant information for whatever object your mouse is over at the
-						time.</p>
-					<p>Near the right hand end of the status bar is a small graph
-						showing RED's current memory usage. It is worth keeping an eye on
-						your memory usage since running out of memory will cause RED to
-						run very slowly, and eventually to stop altogether.</p>
-					<p>The memory usage graph is in three parts:</p>
-					<ul>
-						<li>The red part indicates the memory currently being used by
-							RED</li>
-						<li>The orange part indicates memory which RED has reserved
-							but isn't currently using</li>
-						<li>The green part indicates memory which is available to RED
-							but it isn't using</li>
-					</ul>
-					<p>To get an accurate view of the current memory usage you can
-						double click on this graph which will cause RED to pause and clean
-						up all of its memory. What you then see will be the actual amount
-						of memory which is being consumed by the program. At other times
-						the usage will include inactive memory which RED hasn't got round
-						to cleaning up.</p>
-					<p>The percentage value shown is the percentage of total
-						available memory (green) which is currently being used (red). When
-						this percentage reaches 90% you will get a warning since you are
-						coming close to running out of available memory. In this case you
-						should look at the memory settings and preferences documentation
-						to see how you can enable more memory or reduce the amount of
-						memory RED requires.</p>
-				  <p>	At the right hand end of the bar is a small icon which shows
-						the current status of your disk cache. If this icon is red then
-						caching is not being used. If it is green then caching is enabled
-						but inactive. If it is orange then caching is enabled and data is
-						currently being read from the cache. You can double click on this
-						icon to turn disk caching on/off, but the change will not take
-						effect until RED is restarted.</p>
-					<h1 id="chapter4" class="page-header">4	Filters</h1>
-				  <p>RED implemented a variety of different  types of filters to reduce false positive rate of the RNA-editing sites.<br>
-					  It is worth spending some time looking  through the different filters available. Each filter can be set as your favor.  After each step, a set of candidate sites will be filtered out and these  eliminated sites will be highlighted. Each color stands for one kind of filter.  You can easily undo each step.<br>
-			      With different input data, you will choose <em>de novo</em> mode or Dna/Rna mode.</p>
-					<h3 id="section4.1">4.1	Reference files used in filters</h3>
-					<table border="1" cellpadding="0" cellspacing="0">
-					  <tr>
-					    <td width="157" align="center" valign="middle"><p>filter</p></td>
-					    <td width="157" align="center" valign="middle"><p>Reference file    needed</p></td>
-					    <td width="157" align="center" valign="middle"><p>Comment</p></td>
-					    <td width="157" align="center" valign="middle"><p>Websites</p></td>
-				      </tr>
-					  <tr>
-					    <td width="157" align="center" valign="middle"><p>repeatFilter</p></td>
-					    <td width="157" align="center" valign="middle"><p>hg19.fa.out.gz</p></td>
-					    <td width="157" align="center" valign="middle"><p>repeatmasker</p></td>
-					    <td width="157" align="center" valign="middle"><p>http://www.repeatmasker.org/species/hg.html</p></td>
-				      </tr>
-					  <tr>
-					    <td width="157" align="center" valign="middle"><p>comprehensiveFilter</p></td>
-					    <td width="157" align="center" valign="middle"><p>genes.gtf</p></td>
-					    <td width="157" align="center" valign="middle"><p>Gene features</p></td>
-					    <td width="157" align="center" valign="middle"><p>http://genome.ucsc.edu/cgi-bin/hgTables</p></td>
-				      </tr>
-					  <tr>
-					    <td width="157" align="center" valign="middle"><p>dnSNPFilter</p></td>
-					    <td width="157" align="center" valign="middle"><p>dbsnp_138_hg19.vcf</p></td>
-					    <td width="157" align="center" valign="middle"><p>Known snps sites</p></td>
-					    <td width="157" align="center" valign="middle"><p>http://www.ncbi.nlm.nih.gov/SNP/</p></td>
-				      </tr>
-					  <tr>
-					    <td width="157" align="center" valign="middle"><p>P-Value Filter</p></td>
-					    <td width="157" align="center" valign="middle"><p>hg19.txt</p></td>
-					    <td width="157" align="center" valign="middle"><p>Known RNA-editing    sites</p></td>
-					    <td width="157" align="center" valign="middle"><p>http://darned.ucc.ie/static/downloads/hg19.txt</p></td>
-				      </tr>
-				  </table>
-                  <h3 id="section4.2">4.2	<em>Denovo</em> Mode</h3>
-                  <h4>4.2.1	Input Data</h4>
-                  <p>A variant calling format (VCF) file from RNA-seq is necessary. There is no a standard protocol to call sequence variant from RNA-Seq data, although a highly accurate approach termed SNPiR has been presented to identify SNPs in RNA-seq data {Piskol:2013fn} Usually, it takes a few minutes to load bam file, while DNA sequencing data may take more time. We strongly recommend users follow regular format, some weird vcf file can&rsquo;t be resolved correctly. If your vcf file contains more than one sample, please make an annotation before the process. </p>
-                  <h4 id="section4.2.2">4.2.2	Basic Filter</h4>
-                  <p>First, you have to nominate target editing type that you want to study in  . Usually, A-G is recommended.  </p>
-                  <p>Second, site quality and the depth of coverage of site were two key measures to be set up. You can select an upper and a lower limit for the range of values you want to include. If you leave the lower value blank then anything under the upper cutoff will pass. If you leave the upper value blank then anything above the lower cutoff will pass. 	</p>
-                  <ul>
-                    <li>Q: ranging from 1-200 	</li>
-                    <li>Base coverage: ranging from 1-200 </li>
+                              <div onmouseover=show(7); onmouseout=hide(7); id="panel7" class="panel-heading">
+                                      <h4 class="panel-title">
+                                      <a href="#chapter7">7	Configuration</a>
+                                  </h4>
+                              </div>
+                              <div onmouseover=show(7); onmouseout=hide(7); id="collapse7" class="panel-collapse collapse">
+                                  <div class="panel-body">
+                                      <h5><a href="#section7.1">7.1	RED Preferences</a></h5>
+                                  </div>
+                                  <div class="panel-body">
+                                      <h5><a href="#section7.2">7.2	Memory Settings </a></h5>
+                                  </div>
+                                  
+                              </div>
+                          </div>  
+                          
+                          <div class="panel panel-default">
+                              <div onmouseover=show(8); onmouseout=hide(8); id="panel8" class="panel-heading">
+                                      <h4 class="panel-title">
+                                      <a href="#chapter8">8	Reporting Bugs</a>
+                                  </h4>
+                              </div>
+                          </div>   
+                             
+                           <div class="panel panel-default">
+                              <div onmouseover=show(9); onmouseout=hide(9); id="panel9" class="panel-heading">
+                                      <h4 class="panel-title">
+                                      <a href="#chapter9">9	Credits</a>
+                                  </h4>
+                              </div>
+                          </div>     
+                          
+                      </div>
                   </ul>
-                  <h4>4.2.3	Repeated Filter </h4>
-                  <p>Some repeated positions in DNA/RNA have not been proved to be functional, so we consider them as less useful. We will filter out bases located in such regions. However, SINA/Alu region is supposed to be somewhat functional, bases located in it will be remained . </p>
-                  <h4>4.2.4	Comprehensive Filter </h4>
-                  <p>On the both edges of each read, bases seems to be with lower quality and mapping can be possibly wrong. As a result, we will filter out intronic sites within 4 bp of splice junction, which is supposed to be unreliable.  Users can set the number of bases on the splice junction. 4 is by default. </p>
-                  <h4>4.2.5	Known SNVs Filter</h4>
-                  <p>A candidate site will be filtered out if it is a known variants. It is a necessary in the analyses.</p>
-                  <h4>4.2.6	Statistical Filter</h4>
-                  <h4>4.2.7	Fisher Exact Test</h4>
-                  <p>First, users need to get R installed, and install the package &ldquo;rjava&rdquo; , and &rdquo;qvalue&rdquo; as below</p>
-                  <p>source (&quot;http://bioconductor.org/biocLite.R&quot;)</p>
-                  <p>biocLite(&quot;qvalue&quot;)</p>
-                  <p><em>Please provide the detail of how fisher exact test was performed. </em></p>
-                  <p>R is efficient in performing statistical tests,. P value will be calculated through rJava, andits threshold can be set by user (default: 0.05). We used false discovery rate (FDR) to correct for multiple testing (q-value). </p>
-                  <h3 id="section4.3">4.3	DNA-RNA Mode </h3>
-                  <p>4.3.1	DNA-RNA </p>
-                  <p>Filter RNA-editing means bases are polymer in RNA while in DNA are not. So we will filter out all sites when DNA and RNA data is the same in one base. </p>
-                  <h4>4.3.2	Likelihood Ratio (LLR) Test </h4>
-                  <p>We used the method in Chepelev {Chepelev:2011ia} to calculate LLR. The ratio between LLR calculated by the current editing level and non-editing level is set by user (while 4 is recommended). The number represent probability ratio which can be calculated as pow(10,number). 4 represent 10000 times and 3 represent 1000 times and so on. The specificity will improve while sensitivity will decline with ratio increasing. </p>
-                  <h1 class="page-header" id="chapter5">5	Reports</h1>
-                  <p>The <a href="#chapter5"><em>Reports</em></a> section allows you to construct a report based on the fiteration and statistical tests illustrated before. The reports are based on probeset/probelists or data from database. There are three ways to present RNA-editing sites, which are Variant Distribution, Sites Distribution and Filter Reports. The report plot can be exported as described in  <a href="#section6.1"><em>Saving Images</em></a> section. If you need more RNA-editing sites information, you can export the result in a text format. </p>
-                  <h3 id="section5.1">5.1	Variant distribution (in a karyogram view)</h3>
-                  <p>Viriant distribution plot shows all RNA-editing variant type information when given a probelist. Shown as follow.</p>
-                  <p><img src="img/fig.5.1.png" width="645" height="483"></p>
-                  <p class="imgname">Fig. 5.1 Variant type distribution count</p>
-                  <p>Double-click the highlighted block shows the details of RNA-editing sites.</p>
-                  <p><img src="img/fig.5.2.png" width="500" height="350"></p>
-                  <p class="imgname">Fig. 5.2 Details for highlighted block</p>
-                  <p>You can also save the plot by clicking &lsquo;save&rsquo; button and export all RNA-editing sites information by clicking &lsquo;Export Data&rsquo; button.</p>
-                  <h3 id="section5.2">5.2	Sites Distribution</h3>
-                  <p>Sites distribution plot shows all candidate RNA-editing sites that distributed in the chromosome and their corresponding coordinates.</p>
-                  <p><img src="img/fig.5.3.png" width="641" height="480"></p>
-                  <p class="imgname">Fig. 5.3 Sites distribution count</p>
-                  <p>Double-click the highlighted block shows the details of RNA-editing sites, like Fig. 5.2.</p>
-                  <h3 id="section5.3">5.3	Filter Reports</h3>
-                  <p>We also present the results in a text format. Information about the potential RNA editing sites are listed, including chromosome, position, id, reference base, alternative base, quality, editing level, p-value, and FDR. The program will query all information about a probelist generated by filter from database and present the result. However, if statistical filter has not been performed, there will not be editing level, p-value and FDR, the value is -1 instead.</p>
-                  <p><img src="img/fig.5.4.png" width="500" height="250"></p>
-                  <p class="imgname">Fig. 5.4 Select a probelist before generating RNA-editing reports</p>
-                  <p>After selecting a probelist which you want to generate a report, press 'OK' button and the report is being generated as the following shown.</p>
-                  <p><img src="img/fig.5.5.png" width="659" height="494"></p>
-                  <p class="imgname">Fig. 5.5 The filter report</p>
-                  <h1 class="page-header" id="chapter6">6	Saving Data </h1>
-                  <h3 id="section6.1">6.1	Saving a Project</h3>
-                  <p>You can choose to save a project at any point. A RED project file is a single file which saves both your data and many of your display preferences so that you can get back to working on your data very quickly.</p>
-                  <p>Data which is stored in a project file is:</p>
-                  <ul>
-                    <li>&bull;The positions of all sequencing reads</li>
-                    <li> The details of your samples </li>
-                    <li>The details of your sample groups </li>
-                    <li>The positions of potential RNA editing sites </li>
-                    <li>	All current probe lists </li>
-                    <li>	The list of currently visible data and feature track </li>
-                    <li>	The current position of the chromosome view </li>
-                    <li>	The current data zoom level </li>
-                    <li>	The current data view (probes+reads, just probes, just reads) </li>
-                  </ul>
-                  <p>Some preferences are not stored in the project file and won't be remembered when the program reopens.</p>
-                  <ul>
-                    <li>	The genome annotation data (this is referenced and will be downloaded from the <a href="http://igv.broadinstitute.org/genomes/genomes.txt"><em>IGV server</em></a> if required)</li>
-                    <li>	The size and layout of the panels in the current display (in case you open the file on a different sized screen) </li>
-                  </ul>
-                  <p>If you have changed any of the details which RED stores in its project file during your session, when you close the program you will be prompted to re-save the project before exiting.</p>
-                  <p><img src="img/fig.6.1.png" width="565" height="118"></p>
-                 <p class="imgname">Fig. 6.1 Save project or not before exiting</p>
-                  <p>You should be aware that because RED has to write out all of the read data when it saves a project that this can take a few minutes to complete if you have several large datasets open.</p>
-                  <h3 id="section6.2">6.2	Saving Images</h3>
-                  <p>You can export images generated in RED into three different graphics formats. To export the graphics you see in the main RED window you can select File &gt; Export Image&hellip; from the main menu and then choose from the Genome View and the Chromosome View.</p>
-                  <p><img src="img/fig.6.2.png" width="571" height="486"></p>
-                <p class="imgname">Fig. 6.2 Export image of current view</p>
-                  <h4>6.2.1	SVG Images</h4>
-                  <p>SVG images are vector images which means that you can blow them up to any size and they will still look smooth. You can also break them apart and edit the individual components. SVG images can only be viewed and edited by a more limited range of software but these packages can render high-quality bitmap images from the SVG images and these can then be used in publications. We would recommend the free program Inkscape (www.inkscape.org) for editing SVG files, or you could use a commercial package such as Adobe Illustrator.</p>
-                  <h4>6.2.2	EPS Images</h4>
-                  <p>Encapsulated PostScript (EPS) is a DSC-conforming PostScript document with additional restrictions which is intended to be usable as a graphics file format. Simply, an EPS file is a PostScript program, saved as a single file that includes a low-resolution preview &quot;encapsulated&quot; inside of it, allowing some programs to display a preview on the screen. It can be edited by a text editor or any PostScript printer like Adobe Illustrator, Adobe Photoshop.</p>
-                  <h4>6.2.3	PNG Images</h4>
-                  <p>PNG images are the default selection. These are bitmap images, which means that you can only edit them in the same way that you would edit a photograph. You can't make these images any larger and they will be produced initially at the same size as you saw them on screen. They are the equivalent of taking a screenshot. These images can be opened in almost any program which can handle images, but are probably not of sufficient quality to use for publications.</p>
-                  <h3 id="section6.3">6.3	Saving Text</h3>
-                  <p>When you generate a report or a probe list you can choose to save this. All text based exports in RED are written out as tab-delimited text files. Although you can open these in any text editor you can also open them directly in a spreadsheet application which should recognise them and import them whilst keeping the structure of the original table.</p>
-                  <h1 class="page-header" id="chapter7">7	Configuration</h1>
-                  <h3 id="section7.1">7.1	RED Preferences</h3>
-                  <p>Under <em>Edit &gt; Preferences</em>, you could change preferences that can either improve the running of RED or to make it more suited to the way you work. In most cases, RED will work fine with the default values. If you are unsure about changing a preference then leave it alone. </p>
-                  <p>All of your preferences are stored in a file of 'red_prefs.txt', which is present in the program directory. If you want to completely reset your preferences, you can simply delete this file and a default file will be created when RED is re-run. </p>
-                  <p><img src="img/fig.7.1.png" width="600" height="300"></p>
-                 <p class="imgname">Fig. 7.1 RED preferences</p>
-                  <p>There are four groups of preference settings which can be accessed via the tabs at the top of the window.</p>
-                  <ul>
-                    <li><strong>	Files</strong> - allows you to set the default location where RED will look for different types of files </li>
-                    <li><strong>	Memory</strong> - allows you to change the behaviour of RED to optimise memory usage </li>
-                    <li>	<strong>Network</strong> - allows you to enter settings which may be required to access the internet from your machine </li>
-                    <li><strong>	Updates</strong> - allows you to say whether you want RED to check if it is the latest version available </li>
-                  </ul>
-                  <h4>7.1.1	Files</h4>
-                  <p>You can set locations for eight files. To change these, just press the browse button on the right of each field and select the directory you want. We strongly recommend you to stay default setting. These folders need to be writable by users of the program. </p>
-                  <p>The file locations you can specify are:</p>
-                  <ul>
-                    <li>Project Data Directory</li>
-                  </ul>
-                  <p>The project data directory is the root directory to place your raw data. The following directories are under the project directory. The program firstly will search all data from this directory, and try to find out what you have cached before.</p>
-                  <ul>
-                    <li>	Genome Directory</li>
-                  </ul>
-                  <p>This is the directory under which your genome files will be stored. These are automatically downloaded from the IGV server if your local drive doesn't exist the genome you want.</p>
-                  <ul>
-                    <li>Fasta Directory</li>
-                  </ul>
-                  <p>The fasta directory stores raw reference genome sequence relative to the genome. It can also contain a large amount of data. You may wish to change this to a local drive, or have the same genome folder shared by several users to save on disk space.</p>
-                  <ul>
-                    <li>RNA Directory</li>
-                  </ul>
-                  <p>The RNA directory stores RNA sequence which its format mainly contains bam/sam. The RNA data is essential to find out potential RNA editing sites. It can be used in <em>Denovo</em> or <em>non-Denovo</em> sequencing procedures. It can also contain a large amount of data. You may wish to change this to a local drive, or have the same genome folder shared by several users to save on disk space.</p>
-                  <ul>
-                    <li>DNA Directory</li>
-                  </ul>
-                  <p>The DNA directory stores DNA sequence which its format mainly contains bam/sam. The DNA data is essential if we perform non-Denovo sequencing procedure. It can also contain a large amount of data. You may wish to change this to a local drive, or have the same genome folder shared by several users to save on disk space.</p>
-                  <ul>
-                    <li>Annotation Directory</li>
-                  </ul>
-                  <p>It may store a variety of annotation files which can be imported into custom annotation tracks. The track will be displayed in the future version.</p>
-                  <ul>
-                    <li>Others Directory</li>
-                  </ul>
-                  <p>This directory saves some fragmentary files like 'cytoband.txt' from genome file.</p>
-                  <ul>
-                    <li>Temp Directory</li>
-                  </ul>
-                  <p>The temp directory stores temporary cache file for data sets. The directory will be cleared when the program is closed.</p>
-                  <h4>7.1.2	Memory</h4>
-                  <p>&bull;	Disk caches</p>
-                  <p> Large datasets come with huge amounts of mapped position data, which  can consume large amounts of memory whilst being idle for most of the time. You can choose to save this data to cache files on disk to free up active memory. The cost for this is that every time you want to refer back to the data there will be a delay whilst the data is retrieved from disk. This will happen when you switch the genome view between chromosomes, or when you perform an operation such as filtering which needs to read through all of the data.</p>
-                  <p>You need to tell RED which directory you want to use to save this data. Changes to the caching options will not have any effect until RED is restarted.</p>
-                  <p>&bull;	File Compression</p>
-                  <p>By default RED saves its data in a text based format which is quick to read, but is not designed to be a very compact format. If you choose to turn on file compression then all of your RED output files will be gzip compressed as they are written. This will reduce the filesize of your output by a factor of about 3, but will increase the time to save data by a factor of about 2. Loading of compressed files is only marginally slower than uncompressed files.  </p>
-                  <h4>7.1.3	 Network  </h4>
-                  <p>If you was not able to access the internet directly, you may set up a proxy server by yourself. Since RED requires access to the network to be able to download genome annotation files, it needs to know if your network requires a proxy. If your network uses a proxy, you need to fill in the HTTP proxy server and HTTP proxy port boxes. The name of the server should be provided without an 'http://' prefix. If you don't use a proxy then the server box should be empty (it doesn't matter what is in the port box in this case). </p>
-                  <p>The final option is to specify a location for the RED data server. Although it is possible for sites to run their own data servers this is not likely to be common and you should leave this alone unless you are absolutely sure that you need to change it. </p>
-                  <h4>7.1.4	Updates  </h4>
-                  <p>RED is under continual development and regular new releases will add new features and fix bugs which have been reported. It is a good idea to keep RED updated to the latest version to ensure you are benefitting from these development efforts. </p>
-                  <p>By default every time RED is started it will check back with its download server to see if a newer version of the program is available. If a newer version has been released you will be informed of this - no change will be made to your existing program. To install the newer version you simply go back to the project website at <a href="https://github.com/iluhcm/REDetector">https://github.com/iluhcm/REDetector</a> and download the update.</p>
-                  <p> If you do not want RED to check for updates then simply untick the &quot;Check for program updates on startup&quot; box in the updates preferences. </p>
-                  <h3 id="section7.2">7.2	Memory Settings  </h3>
-                  <p>RED works with very large data sets (genome annotations, reference sequence and sequence alignment/map data), and it therefore requires a large amount of RAM. </p>
-                  <p>Whilst most aspects of the program can be altered from within RED itself, the total amount of memory available to the program is determined when it is started. The RED launcher program will try to determine the optimal amount of memory to assign to RED when it starts, but in some cases, you may need to take steps to adjust this. </p>
-                  <h4>7.2.1	General Limitations </h4>
-                  <p>The default configuration of RED is to assign the program 2/3 of the physical memory installed on your machine  . Thus on a machine with 6GB of RAM, 4GB will be allocated to RED. Because of overheads in Java itself the amount of available memory reported in the welcome screen will be around 80% of the originally allocated memory. </p>
-                  <p> This default allocation is then limited in some cases. If you are running a 32 bit operating system, or a 64 bit operating system but a 32 bit version of java then the maximum memory allocation is limited to 1.5GB, however much RAM is installed  . If you want to make use of more memory than this you will need a 64 bit OS and version of java. On 64 bit machines running 64 bit java the top memory limit for RED is 8GB, and it's unlikely that you'll benefit from using more than that. </p>
-                  <p>You can manually set the RED memory allocation by yourself. </p>
-                  <h4>7.2.2	Windows and Linux </h4>
-                  <p>Changing the memory allocation in windows or linux is as simple as passing an extra parameter when launching the program. Instead of starting RED by just running 'red' you would run 'red -m XXXX' where XXXX is the amount of memory (in MB) you want to use. </p>
-                  <h4>7.2.3	OS X</h4>
-                  <p>RED on OS X is distributed as an application bundle, inside which is the configuration file which determines the amount of available memory. To change this do the following:</p>
-                  <ul>
-                    <li>	Find the RED application in the Finder. </li>
-                    <li>	Control-click on the application and select &quot;Show package Contents&quot; </li>
-                    <li>	Double click on the contents folder </li>
-                    <li>	Double click the Info.plist file (this will open an application called Property List Editor. </li>
-                    <li>	Look for the line which says 'executable file' </li>
-                    <li>	Edit the value from 'red' to 'red -m XXXXX' where XXXXX is the amount of memory (in B) you want to use. </li>
-                    <li>	Once you've finished, select File &gt; Save to save your changes and then quit PropertyListEditor. </li>
-                    <li>	Restart RED and the new memory limits will be used. </li>
-                  </ul>
-                  <h1 class="page-header" id="chapter8">8	Reporting Bugs</h1>
-                  <p>If you find a problem with RED, please try the following steps:</p>
-                  <ul>
-                    <li>	Check our help content to see if there is a solution already listed </li>
-                    <li>	Check that you are running the latest version of RED. You can see the version you are running by selecting Help &gt; About and you can check RED website to see what the latest version is </li>
-                    <li>	If the problem still remains, report a bug! </li>
-                  </ul>
-                  <p>The easiest way to report a bug is to use our online bug reporting and tracking system at <a href="https://github.com/iluhcm/REDetector/issues">https://github.com/iluhcm/REDetector/issues</a>. Alternatively, you can email the report to sam.lxing@gmail.com.</p>
-                  <p>We'd like to hear suggestions for new functionality you would like to see in RED, or ways in which we could improve the usability of the functions which are already there. You can let us know about these by filing them as a bug with a severity of 'enhancement'.</p>
-                  <h1 class="page-header" id="chapter9">9	Credits</h1>
-                  <p>RED is a free software, and you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version .</p>
-                  <p>SeqMonk &amp; Intergrative Genome Viewer (IGV)</p>
-                  <p>We thank <a href="http://www.bioinformatics.babraham.ac.uk/projects/seqmonk/"><em>SeqMonk</em></a> (http://www.bioinformatics.babraham.ac.uk/projects/seqmonk/) and <a href="http://www.broadinstitute.org/igv/"><em>IGV</em></a> (http://www.broadinstitute.org/igv/). The framework of the GUI in RED is based on SeqMonk, whose GUI is very brief and operating efficiency is fairly high. Meantime, the genome annotation data (mainly referred to gene.txt/gene.gtf) in <a href="#section3.5.1"><em>Feature Track</em></a> is obtained from <a href="http://igv.broadinstitute.org/genomes/genomes.txt">genome server</a> of IGV when there is no genome file in the local host.</p>
-                  <p>Xing Li: design the software framework, implement layout, present graphic and text output for RNA editing sites, and prepare the software document.</p>
-                  <p>Di Wu: desigh the software framework, implement multiple filters and formal statistical tests in the software, and perform data analysis.</p>
-                  <p>Qi Pan: prepare RNA-seq and WES data for RNA editing sites analyses</p>
-                  <p>Yongmei Sun: design the software framework, and supervise the project.</p>
-                  <p>Keyue Ding: conceive and design the project, prepare the software document, and perform data analysis, and supervise the project.              </p>
-			  </div>
-			</div>
-			<!-- 分栏 内容主体完 -->
-		</div>
-
-	</div>
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
-	<!-- Include all compiled plugins (below), or include individual files as needed -->
-	<script
-		src="http://cdn.bootcss.com/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-	<!-- Analytics================================================== -->
-	<script type="text/javascript">
-		var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://"
-				: " http://");
-		document
-				.write(unescape("%3Cscript src='"
-						+ _bdhmProtocol
-						+ "hm.baidu.com/h.js%3F3d8e7fc0de8a2a75f2ca3bfe128e6391' type='text/javascript'%3E%3C/script%3E"));
-	</script>
-    
-   <script type="text/javascript">
-   function show(id){
-	   var panel_flag = "#panel"+id;
-	   var collapse_flag = "#collapse"+id;
-	   $(panel_flag).addClass("in");
-	   $(collapse_flag).addClass("in");
-	   }
-	  function hide(id){
-	   var panel_flag = "#panel"+id;
-	   var collapse_flag = "#collapse"+id;
-	   $(panel_flag).removeClass("in");
-	   $(collapse_flag).removeClass("in");
-	  }	  
- </script>
-</body>
-</html>
+              </div>
+  
+              <!-- 分栏 内容主体 -->
+              <div class="col-md-10"
+                  style="padding-left: 40px;padding-right: 20px;">
+                  <div class="bs-docs-section">
+                      <!-- 第一章 -->
+                      <h1 id="chapter1" class="page-header">1 Introduction</h1>
+                      <h3 id="section1.1">1.1 What is RED</h3>
+                      <p>RNA editing is one of the post- or co-transcriptional
+                          processes with modification of RNA nucleotides from their
+                          genome-encoded sequence. In human, RNA editing event occurs mostly
+                          by deamination of adenosine to inosine (A-to-I) conversion through
+                          ADAR enzymes.</p>
+                    <p>RED (RNA Editing Detector) is a program to detect and
+                          visualize RNA editing events at the genomic scale using
+                          next-generation sequencing (NGS) data. The software intergrates
+                          multiple steps to filter spurisous variant sites, and then
+                          performs formal statistical tests to identify reliable RNA editing
+                          sites. A potential RNA editing site can be visualized in the
+                          context of reference genome (/gene).</p>
+                      <img src="img/fig.1.1.png" alt="" height=603 width=911 />
+                      <p class="imgname">Fig. 1.1 A screen shot of RED</p>
+                      <p>RED is a Java-based program with Graphic User Interface
+                          (GUI), which works on mainstream operating systems (e.g., Windows,
+                          Linux and Mac OS X). To make it more efficient, everlasting and
+                          faster-saving, we use MySQL database management system (DBMS) in
+                          manuplicating huge NGS data. In addition, we use
+                          functions in <em>R</em> to perform statistical
+                          analysis. However, you'll never manipulate R and MySQL when you
+                          use RED. All of the operation relative to <em>R</em> and MySQL is
+                          completed by RED automatically. RED enables the analysis of RNA
+                          editing events at two levels (illustrated below) using VCF files
+                          from different sources and the presentation of full mapped
+                          sequence data using BAM/SAM file:</p>
+                      <ul>
+                          <li>Detection of RNA editing sites using RNA-seq data alone
+                              (i.e., <em>De Novo</em> identification)</li>
+                          <li>Detection of RNA editing sites using both DNA-seq
+                              data (e.g., whole exome sequencing) and RNA-Seq data</li>
+                      </ul>
+                      <h3 id="section1.2">1.2 Prerequisites</h3>
+                      <ul>
+                          <li>Java Runtime Environment (jdk 1.7.0_21 or later)</li>
+                          <li>MySQL Database Management System (MySQL 5.6.19 or later)</li>
+                          <li>R Environment (R 3.1.1 or later)</li>
+                      </ul>
+                      <h3 id="section1.3">1.3 Installation</h3>
+                      <h4>1.3.1 Install Java Runtime Environment</h4>
+                      <p>Java Runtime Environment (JRE) is basically the Java Virtual
+                          Machine (JVM) where your Java programs run on. It also includes
+                          browser plugins for Applet execution. Java Development Kit (JDK)
+                          is the full featured Software Development Kit (SDK) for Java,
+                          including JRE, and the compilers and tools (e.g., JavaDoc, and
+                          Java Debugger) to create and compile programs. In order to run
+                          RED, we need to install either JRE or JDK.</p>
+                      <ul>
+                          <li>JDK:</li>
+                          <p>
+                              <a href="URI">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a>
+                          </p>
+                          <li>JRE:</li>
+                          <p>
+                              <a href="URI">http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html</a>
+                          </p>
+                      </ul>
+                      <h4>1.3.2 Install MySQL Database</h4>
+                      <p>RED stores almost all data into database so that we can reuse the
+                          data for research. MySQL is one of the best choice since it is
+                          free and efficient. Install MySQL database with the following download page.</p>
+                      <ul>
+                          <li>MySQL:</li>
+                          <p>
+                              <a href="URI">http://dev.mysql.com/downloads/mysql/</a>
+                          </p>
+                      </ul>
+                      <p>Although default configuration in MySQL can ensure your server works well, you could edit the configure file to gain better performance. For Linux System, edit the parameters in the file of /etc/my.cnf (default configuration path). For Windows System, you could use <a href="http://dev.mysql.com/downloads/workbench/"><em>MySQL Workbench</em></a> to configure your server efficiently.</p>
+                      
+                      <h4>1.3.3 Install <i>R</i> Environment
+                      </h4>
+  
+                      <p><em>R</em> is a free software environment for statistical computing
+                          and graphics. It compiles and runs on a wide variety of UNIX
+                          platforms, Windows and MacOS. To download <em>R</em>, please choose your
+                          preferred<em> <a href="http://cran.r-project.org/mirrors.html">CRAN mirror</a></em><a href="http://cran.r-project.org/mirrors.html"></a>. </p>
+                      <p>The package of “rJava” in <em>R</em> is required,
+                          which ensures connection between <em>R</em> and Java. Open a <em>R</em> Window and
+                          type:</p>
+                      <p>
+                          <code>
+                              <i>install.packages(rJava)</i>
+                          </code>
+                      </p>
+                      <p>The package will be installed automatically with Internet
+                          connection.</p>
+                      <ul>
+                          <li><em>R</em>:</li>
+                          <p>
+                              <a href="URI">http://www.r-project.org/</a>
+                          </p>
+                      </ul>
+                      <h3 id="section1.4">1.4 Terminology</h3>
+                      <p>Several terms are used throughout the RED documentation and program. To make it more easier to be understood, we have a simple introduction.</p>
+                      <h4>1.4.1 Molecular Biology</h4>
+                      <ul>
+                          <li><strong>RNA Editing</strong></li>
+                      </ul>
+                      <p>RNA editing is one of the post- or co-transcriptional
+                          processes with modification of RNA nucleotides from their
+                          genome-encoded sequence.</p>
+                      <ul>
+                          <li><strong>Reference Genome</strong></li>
+                      </ul>
+                      <p>Reference genome is a comprehensive, integrated,
+                          non-redundant, well-annotated set of reference sequences including
+                          genomic, transcript, and protein (hg19).</p>
+                      <ul>
+                          <li><strong>Sequence Alignment Map (<i>.bam/.sam</i>) File
+                          </strong></li>
+                      </ul>
+                      <p>SAM format is a text format for storing sequence data in a
+                          series of tab delimited ASCII columns, while BAM format stores the
+                          same data in a compressed, indexed, binary form.</p>
+                      <ul>
+                          <li><strong>Variant Calling Format (<i>.vcf</i>) File
+                          </strong></li>
+                      </ul>
+                      <p>VCF is a text file format (most likely stored in a
+                          compressed manner) which contains meta-information lines, a header
+                          line, and then data lines each containing information about a
+                          position in the genome.</p>
+  
+                      <h4>1.4.2 Program</h4>
+                      <ul>
+                          <li><strong>Data Set</strong></li>
+                      </ul>
+                      <p>A data set stores a set of data, which is imported from a
+                          single file. It is an efficient way to be handled and presented.
+                          In program, a data set refers to a BAM/SAM file that contains
+                          sequence alignment/map information, which is displayed in the
+                          context of reference sequence.</p>
+                      <ul>
+                          <li><strong>Data Group</strong></li>
+                      </ul>
+                      <p>A data group contains two or more data sets with different
+                          biological conditions to make it compared for some purposes (e.g.,
+                          comparing RNA editing sites identified in cancer tissues and
+                          adjacent normal tissues). In a given data group, we aggregate data
+                          sets needed for research and save the results of comparison. This
+                          function has not completely worked , and we will try our best to
+                          make it come true in the next version.</p>
+                      <ul>
+                          <li><strong>Data Store</strong></li>
+                      </ul>
+                      <p>A data store refers to either a data set or a data group.
+                          Most analyses and visualizations in RED operate on data stores and
+                          they work equally well with either data sets or data groups.</p>
+                      <ul>
+                          <li><strong>Probe/ProbeBean</strong></li>
+                      </ul>
+                      <p>
+                          A probe represents a potential RNA-editing site which contains
+                          basic information (e.g., coordinate, reference base and editing base), while a
+                          probe bean contains all information derived from <i>.vcf</i> file.
+                      </p>
+                      <ul>
+                          <li><strong>Probe Set</strong></li>
+                      </ul>
+                      <p>A probe set stores all probes from an initial vcf file,
+                          namely stores all RNA-editing sites without using any filter. It
+                          is also the root of a pipeline tree when executing any filter to
+                          the original probe set. The probe set is produced when a vcf file
+                          has been input into database.</p>
+                      <ul>
+                          <li><strong>Probe List</strong></li>
+                      </ul>
+                      <p>A probe list is a subset of the probe set. Probe lists are
+                          generated by one or more filters implemented in RED, which store
+                          the remaining editing sites after filteration. However, we can
+                          produce probe lists from another probe list which had executed one
+                          or more filters.</p>
+                      <!-- 第二章 -->
+                      <h1 id="chapter2" class="page-header">2 Getting Started</h1>
+                      <h3 id="section2.1">2.1 Starting a New Project</h3>
+                      <p>Before starting a new project, make sure that you have
+                          configured all running environments mentioned in the <a href="#section1.2"><em>Prerequisites</em></a> section. You can either select a genome or connect to MySQL
+                          database when starting a new project, but both should be performed
+                          to make the program work properly.</p>
+                      <h4>2.1.1 Select a Genome</h4>
+                      <p>
+                          To start a new project, you may first select a new genome of
+                          interest. When the program is open, select <em>File &gt; New
+                              Project…</em> to select a new genome. If there isn't any genome file
+                          in the local host, a warning notification will pop up as the
+                          following illustrated and tell you what you should do.
+                      </p>
+                      <img src="img/fig.2.1.png" alt="" height=135 width=699>
+                      <p class="imgname">Fig. 2.1 Warning when there is no genome in
+                          genome directory</p>
+                      <p>If you choose to download a new genome, click Import New
+                          button and find out the new genome you need.</p>
+                      <img src="img/fig.2.2.png" alt="" height=340px width=380px />
+                      <p class="imgname">Fig. 2.2 Select a new genome to download</p>
+                      <p>After the download completes, the following dialog of
+                          <em>Select Genome…</em> will pop up.</p>
+                      <img src="img/fig.2.3.png" alt="" height=335 width=383 />
+                      <p class="imgname">Fig. 2.3 Select a new genome to import</p>
+                      <p>It is noteworthy that it may take a little bit longer when
+                          importing genome data into RED for the first time. We have a cache
+                          mechanism to make it faster when you reload the same genome. Once
+                          you have selected your genome and it has been loaded, you can move
+                          on to the next step.</p>
+                      <h4>2.1.2 Connecting to MySQL Database</h4>
+                      <p>
+                          A simple database connection dialog will pop up when you select <em>File
+                            &gt; Connect to MySQL…</em> as following illustrated.
+                      </p>
+                      <img src="img/fig.2.4.png" alt="" height=300px width=300px />
+                      <p class="imgname">Fig. 2.4 Connect to MySQL DBMS</p>
+                      <p>With successful connection, the program will detect whether
+                          there is an database with imported data before and then make a
+                          relevant notification for the next step.</p>
+                      <ul>
+                          <li><strong>Null in Database</strong></li>
+                      </ul>
+                      <p>If the database is empty (or null), the program will tell
+                          what you need to prepare for data import.</p>
+                      <img src="img/fig.2.5.png" alt="" height=399px width=498px />
+                      <p class="imgname">Fig. 2.5 Data import notification</p>
+                      <img src="img/fig.2.6.png" alt="" name="fig_2_6" width=600px height=300px id="fig_2_6" />
+                      <p class="imgname">Fig. 2.6 Data import dialog</p>
+                      <p>A simple explanation for each kind of importing file was
+                          shown. It helps you locate what kind of data file should be
+                          imported when you select browse button.</p>
+                      <img src="img/fig.2.7.png" alt="" height=299 width=595 />
+                      <p class="imgname">Fig. 2.7 Importing data</p>
+                      <p>After selecting all paths, press <em>Import</em> button and wait for a moment, all data will be imported to database.</p>
+                      <ul>
+                        <li><strong>Data Which Don't Meet Your Demand in Database</strong></li>
+                    </ul>
+                      <p>
+                          After database is connected using database connection panel, <i><a href="#fig_2_6">Fig.
+                              2.6</a></i> is present by selecting <em>File &gt; Import Data &gt;
+                        Database…</em> and you can import another data for further demand.
+                      </p>
+                      <ul>
+                          <li><strong>Data Which Meets Your Demand in Database</strong></li>
+                      </ul>
+                      <img src="img/fig.2.8.png" alt="" height=402px width=500px />
+                      <p class="imgname">Fig. 2.8 Notification of successful database
+                          connection and data loaded to database</p>
+                      <p>If data have been loaded into database system, then you can
+                          filter spurisous variants for detecting potential RNA-editing
+                          sites.</p>
+                      <h4>2.1.3 Loading a BAM/SAM File (using both RNA-Seq and
+                          DNA-sequencing data; or only RNA-Seq data)</h4>
+                      <p>In order to make a full landscape of all potential
+                          RNA-editing sites at the genomic scale, the sequence alignment/map
+                          file (BAM/SAM), as well as variant calling format file (VCF),
+                          which has been imported to database, is needed. All potential
+                          RNA-editing sites will be shown in <a href="#section3.5"><em>Chromosome Panel</em></a>. The program
+                          only supports paired-end reads in the current release.</p>
+                      <p>The SAM/BAM format has been well defined in <a href="#section1.4"><em>Terminology</em></a> section. We provided an option dialog to help import BAM/SAM data
+                          so you don't need to specify much information.</p>
+                      <img src="img/fig.2.9.png" alt="" height=400px width=400px />
+                      <p class="imgname">Fig. 2.9 An option dialog for importing
+                          BAM/SAM file</p>
+                      <ul>
+                          <li><strong>Remove duplicate reads</strong></li>
+                      </ul>
+                      <p>Removing duplicate reads (reads of the same length and
+                          sequence identity) is a widely used practice to correct bias when
+                          analyzing NGS data. Tick if you want to remove. We strongly
+                          recommend you remove them because it may influence the result of
+                          coverage.</p>
+                      <ul>
+                          <li><strong>Minimal mapping quality</strong></li>
+                      </ul>
+                      <p>Control the minimum mapping quality when importing data. You
+                          can choose to filter some reads in <a href="#section3.5"><em>Chromosome Panel</em></a> when importing
+                          data based on their mapping quality scores. The quality score
+                          ranges from 0 to 255 (with higher scores being better), and if you
+                          set a filter value then only mapped reads with a score above this
+                          value will be imported. Not all read mappers will include a score
+                          value so depending on where the file you are importing came from
+                          this option may have no effect.</p>
+  
+                      <h4>2.1.4 Setting filters</h4>
+                      <p>Eight kinds of filters have been provided in RED, see
+                          <a href="#chapter4"><em>Filters</em></a> section for more detail. Before setting filters, database
+                          must be connected successfully. An initial set of RNA-editing
+                          sites (ProbeSet) will be present as a root tree named All Probes
+                          within <a href="#section3.3"><em>Directory Panel</em></a>. When one filter is executed, a leaf
+                          connected to this tree will be generated associated with the
+                          remaining RNA-editing sites.</p>
+                      <p>For the tested data, we have imported BJ22.RNA.chr8.snvs.vcf
+                          and BJ22.RNA.chr8.snvs.bam file into database which has 9530
+                          candidate RNA-editing sites.</p>
+                      <img src="img/fig.2.10.png" alt="" height=189px width=274px />
+                      <p class="imgname">Fig. 2.10 RNA-seq data and potential RNA
+                          editing sites within Directory Panel</p>
+                      <p>Then we execute the <em><a href="#section4.2.2">Basic Filter</a></em> with quality greater than
+                          20 and coverage greater than 6.</p>
+                      <img src="img/fig.2.11.png" alt="" height=250px width=400px />
+                      <p class="imgname">Fig. 2.11 Basic Filter options</p>
+                      <p>After filteration (for a few seconds), there is a subset of
+                          editing sites remained and a leaf will be produced within
+                          Directory Panel to describe and check what you have filtered out
+                          as illustrated below. At the same time, the Genome Panel and
+                          Chromosome Panel will present the RNA-editing sites by different
+                          colours.</p>
+                      <img src="img/fig.2.12.png" alt="" height=194px width=276px />
+                      <p class="imgname">Fig. 2.12 After executing basic filter, a
+                          probe list is generated</p>
+                      <h4>2.1.5 Reports</h4>
+                      <p>For now, we only support exporting editing sites information
+                          in text format. In the <a href="#section3.3"><em>Directory Panel</em></a>, right-click the probe list
+                          which you want to export, and select <em>Show Sites List</em>, <em>Show Sites
+                          Distribution</em> or <em>Show Variant Distribution</em> to make a report. Please
+                          see <a href="#section3.3.3"><em>Probe Set and Probe Lists</em></a> section for more details.</p>
+                      <h3 id="section2.2">2.2 Opening an Existing Project</h3>
+                      <p>
+                          To open an existing project, select <i>File &gt; Open Project</i>
+                          from the main menu. All RED project files use a .red file
+                          extension. A RED project stores all of the Data Set, Data Group,
+                          Probe Set and Probe List information for your project. It also
+                      remembers which data tracks were visible. See <em><a href="#section6.1">Saving a Project</a></em> section for more details. </p>
+                      <p>Although it stores the name of the genome you were using, it
+                          doesn't contain the actual genome data. If you are using RED on a
+                          new machine, it will automatically download and install the
+                          required genome when you open a project file. If you want to use
+                          RED when not connected to a network, you need to ensure that the
+                          correct genome has been installed locally. Once downloaded,
+                          genomes will be cached on your machine for future use.</p>
+                      <!-- 第三章 -->
+                      <h1 id="chapter3" class="page-header">3 Visualisation</h1>
+                      <p>The main window consists of <em>Toolbar Panel</em>, <em>Directory Panel</em>,
+                          <em>Genome Panel</em>, <em>Feature Panel</em>, <em>Chromosome Panel</em> and <em>Status-bar
+                          Panel</em>. Shown as following figures and table.</p>
+                      <h3 id="section3.1">3.1 Main Window</h3>
+                      <img src="img/fig.3.1.png" alt="" height=394 width=703>
+                      <p class="imgname">Fig. 3.1 Main window</p>
+                      <table border="1" align="center">
+                          <Caption>
+                              <i>Table 1. Panel Explanation</i>
+                          </Caption>
+                          <tr>
+                              <th>Panel</th>
+                              <th>Explanation</th>
+                          </tr>
+                          <tr>
+                              <td>1</td>
+                              <td>Toolbar Panel</td>
+                          </tr>
+                          <tr>
+                              <td>2</td>
+                              <td>Directory Panel</td>
+                          </tr>
+                          <tr>
+                              <td>3</td>
+                              <td>Genome Panel</td>
+                          </tr>
+                          <tr>
+                              <td>4</td>
+                              <td>Feature Panel</td>
+                          </tr>
+                          <tr>
+                              <td>5</td>
+                              <td>Chromosome Panel</td>
+                          </tr>
+                          <tr>
+                              <td>6</td>
+                              <td>Status-bar Panel</td>
+                          </tr>
+                      </table>
+                      <h3 id="section3.2">3.2 Toolbar Panel</h3>
+                      <img src="img/fig.3.2.png" alt="" height=55px width=467px>
+                      <p class="imgname">Fig. 3.2 Toolbar panel</p>
+                      <p>The toolbar is a convenient way to access commonly used
+                          functions, which you can also access via the main menu or keyboard
+                          shortcuts.</p>
+                      <ul>
+                          <li><img src="img/fig.3.2.1.png" alt=""
+                              width=131px height=50px align="left"></li>
+                      </ul>
+                      <p>&nbsp;</p>
+                      <p>These buttons allow you to change the data tracks between
+                          showing just reads, just probes or both reads and probes</p>
+                      <ul>
+                        <li><img src="img/fig.3.2.2.png" alt=""
+                              width=45px height=49px align="left"></li>
+                      </ul>
+                      <p>&nbsp;</p>
+                      <p>This lets you change the data zoom level</p>
+                      <ul>
+                        <li><img src="img/fig.3.2.3.png" alt=""
+                              width=84px height=44px align="left"></li>
+                      </ul>
+                      <p>&nbsp;</p>
+                      <p>These buttons bring up either the Find Feature, or Goto
+                          Position search tools</p>
+                      <ul>
+                        <li><img src="img/fig.3.2.4.png" alt=""
+                              width=201px height=51px align="left"></li>
+                      </ul>
+                      <p>&nbsp;</p>
+                      <p>Drag the tag and change the data zoom level.</p>
+                      <h3 id="section3.3">3.3 Directory Panel</h3>
+                      <p>The directory panel gives you a quick overview of your
+                          <em>Annotation sets</em>, <em>Data Sets</em>, <em>Data Groups</em>, <em>Probe Set</em> and <em>Probe
+                          Lists</em>.</p>
+                      <img src="img/fig.3.3.png" alt="" height=248px width=331px>
+                      <p class="imgname">Fig. 3.3 Directory panel</p>
+                      <p>The view consists of a set of folders which can be expanded
+                          or collapsed either by double clicking them or by clicking on the
+                          little + or - symbols which may appear next to them.</p>
+                      <h4>3.3.1 Data Sets and Data Groups</h4>
+                      <p>As well as seeing your Data Sets and Data Groups you can
+                          also use the data view to perform operation on them.</p>
+                      <p>If you click on any DataStore entry in the <a href="#section3.3"><em>Directory Panel</em></a>,
+                          you will see it become highlighted. If that DataStore is currently
+                          visible in the Chromosome Viewer then it will have a red line at
+                          the top and bottom of the track so you can quickly see where it
+                          is.</p>
+                      <p>If you right click (or Apple+click) on any DataStore you
+                          will see a popup menu of options appear.</p>
+                      <img src="img/fig.3.4.png" alt="" height=242px width=331px>
+                      <p class="imgname">Fig. 3.4 Popup menu of DataSet</p>
+                      <p>The options are:</p>
+                      <ul>
+                          <li><strong>Show Track in Chromosome View</strong></li>
+                      </ul>
+                      <p>
+                          This is a toggle option to turn a track on or off in the chr view.
+                          If the track is currently visible you will see a tick next to this
+                          option. New tracks are added a the end of the current set of
+                          tracks. For more flexible options for adding/removing tracks use
+                          the <i>View &gt; Set Data Tracks</i> option in the main menu.
+                      </p>
+                      <ul>
+                          <li><strong>Rename</strong></li>
+                      </ul>
+                      <p>This allows you to change the name of this Data Store.</p>
+                      <ul>
+                          <li><strong>Delete</strong></li>
+                      </ul>
+                      <p>You can delete this data store (not allowed for Data Sets).</p>
+                      <ul>
+                          <li><strong>Properties</strong></li>
+                      </ul>
+                      <p>This shows basic information about your data store,
+                          including name, file path, total reads, number of positive reads
+                          and negative reads, etc.</p>
+                      <h4>3.3.2 Annotation Sets</h4>
+                      <p>The annotation sets folder will only show you an entry for
+                          the core genome annotations which come with each imported RED
+                          genome. If you import extra annotation then this will show up in
+                          this folder.</p>
+                      <img src="img/fig.3.5.png" alt="" height=266px width=331px>
+                      <p class="imgname">Fig. 3.5 Popup menu of AnnotationSet</p>
+                      <p>Right-clicking on an entry in this folder brings up a popup
+                          menu with the following options:</p>
+                      <ul>
+                          <li>Show Track in Chromosome View</li>
+                      </ul>
+                      <p>
+                          This is a toggle option to turn a track on or off in the chr view.
+                          If the track is currently visible you will see a tick next to this
+                          option. You can also use <em>Edit &gt; Feature Panel</em> option in
+                          the main menu.
+                      </p>
+                      <ul>
+                          <li>Properties</li>
+                      </ul>
+                      <p>Brings up the number of features in each chromosome in this
+                          annotation set.</p>
+                      <ul>
+                          <li>Rename</li>
+                      </ul>
+                      <p>Allows you to change the name of this annotation set.</p>
+                      <ul>
+                          <li>Delete</li>
+                      </ul>
+                      <p>You can delete this annotation from your project (not
+                          allowed for Core Genome annotation).</p>
+                      <h4 id="section3.3.3">3.3.3 Probe Set and Probe Lists</h4>
+                      <p>
+                          When you have imported a <i>.vcf</i> file called from the sequence
+                          mapped data, the probe set will automatically be initialized and
+                          named <i>All Probes</i>. After you implemented filters (no matter
+                          one or more) to the probe set, then a probe list would be
+                          generated to show filtering results.
+                      </p>
+                      <img src="img/fig.3.6.png" alt="" height=348px width=326px>
+                      <p class="imgname">Fig. 3.6 Popup menu of ProbeLists</p>
+                      <p>Right-clicking on an entry in this folder brings up a popup
+                          menu with the following options:</p>
+                      <ul>
+                          <li><strong>Show Sites List</strong></li>
+                      </ul>
+                      <p>Shows all editing sites in a table with filtering
+                          description and comments. The table consists of the following
+                          information: chromosome, position, reference base and alternative
+                          base.</p>
+                      <ul>
+                          <li><strong>Show Sites Distribution</strong></li>
+                      </ul>
+                      <p>
+                          Shows all editing sites distribution in a histogram. See <i><a href="#section5.2">Sites
+                              Distribution</a></i> section for more details.
+                      </p>
+                      <ul>
+                          <li><strong>Show Variant Distribution</strong></li>
+                      </ul>
+                      <p>
+                          Shows all variant type distribution in a histogram. See <i><a href="#section5.1">Variant
+                              Distribution</a></i> section for more details.
+                      </p>
+                      <ul>
+                          <li><strong>Rename</strong></li>
+                      </ul>
+                      <p>Allows you to change the name of this probe list (now allowed
+                          for Probe Set).</p>
+                      <ul>
+                          <li><strong>Edit Comments</strong></li>
+                      </ul>
+                      <p>Allows you to edit comments of a probe list. It mainly
+                          contains filtering information in default.</p>
+                      <ul>
+                          <li>Delete</li>
+                      </ul>
+                      <p>Deletes this annotation from your project (not allowed for
+                          Probe Set)</p>
+                      <h3 id="section3.4">3.4 Genome Panel</h3>
+                      <p>The genome panel shows an overview of all chromosomes from
+                          the reference genome. Once you have performed RNA editing filters,
+                          it will show a whole genome view of the editing sites. We showed
+                          the chromosomes in human only (chromosome 1 to 22, X, Y).</p>
+                      <img src="img/fig.3.7.png" alt="" height=267 width=973>
+                      <p class="imgname">Fig. 3.7 Genome panel before executing
+                          filters</p>
+                      <img src="img/fig.3.8.png" alt="" height=265 width=973>
+                      <p class="imgname">Fig. 3.8 Genome panel with RNA-editing sites
+                          highlighted</p>
+                      <p>A karyogram view of all chromosomes was shown according to
+                          their relative sizes. Each rectangle represents a chromosome. The
+                          highlighted box shows a region currently being shown in the
+                          chromosome view. You can use the genome view to move the
+                          chromosome view to a different chromosome or to a different region
+                          of current chromosome.</p>
+                      <h3 id="section3.5">3.5 Chromosome Panel</h3>
+                      <p>The chromosome panel is the most complex view in RED and is
+                          also where you’re likely to pay the most of your attention to.
+                          There are a lot of options for changing the information which it
+                          showed to you.</p>
+                      <img src="img/fig.3.9.png" alt="" name="fig_3_9" width=720 height=197 id="fig_3_9">
+                      <p class="imgname">Fig. 3.9 The chromosome panel when current
+                          track length is longer than screen pixel</p>
+                      <p>The view is divided into several tracks. The top of the
+                          display is a line of text which tells you which genome and
+                          chromosome you are currently viewing. It also lists the current
+                          position and provides the length of the current view.</p>
+                      <p>Below the text line comes the core genome annotation feature
+                          track which has a blue background, the sequence track which is
+                          shown with specific status and below them is a set of data tracks
+                          which have a white/grey background.</p>
+                      <p>Finally at the bottom is a status bar which can display
+                          various pieces of information, usually related to the data read
+                          position which is currently under the mouse.</p>
+                      <p>In the chromosome panel, you can left-click the mouse to
+                          zoom in and right-click to zoom out. If you put your mouse over a
+                          read it will turn yellow as shown follow.</p>
+                      <h4 id="section3.5.1">3.5.1 Feature track</h4>
+                      <p>The feature track mainly shows the feature from <a href="http://genome.ucsc.edu/cgi-bin/hgTables"><em>NCBI RefSeq
+                          Genes</em></a>, which includes the information of transcription, coding
+                          region and exons. Features in this track are coloured in blue.</p>
+                      <img src="img/fig.3.10.png" alt="" height=35 width=721>
+                      <p class="imgname">Fig. 3.10 Feature track with one complete
+                          feature</p>
+                      <p>The feature is represented as a filled block of colour.
+                          There are three kinds of height in a feature. The most obslate
+                          region stands for the transcribed region, the fattest region
+                          stands for exons region within this feature, while the height
+                          between transcription and exon is coding region.</p>
+                      <p>If you put your mouse over a feature it will display the
+                          feature name below the track. If you want to see more details
+                          about the feature you can double-left-click on it and a feature
+                          information window will open up.</p>
+                      <img src="img/fig.3.11.png" alt="" height=300px width=550px>
+                      <p class="imgname">Fig. 3.11 A popup dialog when clicking on
+                          the feature</p>
+                      <p>In this popup window, you can double-click on the location
+                          to have an overview of this feature.</p>
+                      <h4>3.5.2 Sequence Track</h4>
+                    <p>
+                          The sequence track shows bases of reference genome generated from
+                          a <i>.fasta</i> file(illustrated below), see <i>Real Base
+                              Status</i> section for more details.
+                      </p>
+                      <img src="img/fig.3.12.png" alt="" height=14 width=964>
+                      <p class="imgname">Fig. 3.12 Bases information of reference
+                          genome</p>
+                      <h4>3.5.3 Data Track</h4>
+                      <p>Data tracks can show three kinds of information.</p>
+                      <ul>
+                          <li>The position of the individual mapped reads with block
+                              status</li>
+                          <li>The position of the individual mapped reads with real
+                              base information</li>
+                          <li>The position of RNA editing sites associated with mapped
+                              reads</li>
+                      </ul>
+                      <p>It depends on the whole view length of screen whether it
+                          displays with blocks or real base information. If the length is
+                          longer than the screen pixel, then the mapped reads are displayed
+                          with blocks. If the length is shorter, then there is enough space
+                          to place the base name, so the mapped reads are displayed in its
+                          real base name.</p>
+                      <h4>3.5.3.1 Blocks Status</h4>
+                    <p>
+                          RED shows sequence reads as gray blocks with the reads were
+                          mapped/aligned with the reference genome. <i><a href="#fig_3_9">Fig. 3.9</a></i> and <a href="#fig_3_13"><em>the
+                          following figure</em></a> show read as blocks status. The former view
+                          length is 9.77 MB while the latter is 2.54KB (1MB = 1000 KB =
+                      1000000 bp). </p>
+                      <img src="img/fig.3.13.png" alt="" name="fig_3_13" width=720 height=198 id="fig_3_13">
+                      <p class="imgname">Fig. 3.13 Block status in small areas</p>
+                      <p>If you put your mouse over a read it will be highlighted in
+                          yellow. The status bar at the bottom will show the details of the
+                          position and length of the read.</p>
+                      <h4>3.5.3.2 Real Base Status</h4>
+                    <p>In the real base status, the reference genome base and
+                          mapped read base will appear in the same time. In order to
+                          distinguish all bases, we show bases in different colours.</p>
+                      <img src="img/fig.3.14.png" alt="" height=265 width=973>
+                      <p class="imgname">Fig. 3.14 A given sequenced regions with
+                          bases shown in different colors</p>
+                      <ul>
+                          <li>Green = 'A'</li>
+                          <li>Black = 'G'</li>
+                          <li>Blue = 'C'</li>
+                          <li>Red = 'T'</li>
+                      </ul>
+                      <p>Thus, it is convenient to discover whether a position has
+                          editing base and other editing information. We will provide more
+                          editing information with the following RED version released.</p>
+                      <h4>3.5.4 RNA Editing Sites Only</h4>
+                      <p>We provide the RNA editing sites information when you choose
+                          <em>Show only Probes</em> or <em>Show Reads and Probes</em>. We highlight the
+                          position of a RNA editing site with different colours.</p>
+                    <ul>
+                          <li>Green = 'G'-&gt;'A'</li>
+                          <li>Black = 'A'-&gt;'G'</li>
+                          <li>Blue = 'A'-&gt;'C'</li>
+                          <li>Red = 'C'-&gt;'T'</li>
+                      </ul>
+                      <img src="img/fig.3.15.png" alt="" height=198 width=718>
+                      <p class="imgname">Fig. 3.15 Show only Probes</p>
+                      <img src="img/fig.3.16.png" alt="" height=197 width=720>
+                      <p class="imgname">Fig. 3.16 Show Reads and Probes</p>
+                      <h4>3.5.5 Change Data Tracks</h4>
+                      <p>
+                          You can change which data tracks are shown and the order of the
+                          tracks by selecting <em>Edit &gt; Set Data Tracks</em>, or by using
+                          the toolbar shortcut.
+                      </p>
+                      <img src="img/fig.3.17.png" alt="" height=400px width=600px>
+                      <p class="imgname">Fig. 3.17 Select data tracks displayed on
+                          the screen</p>
+                      <p>The list of tracks on the right is the tracks which will be
+                          displayed in the chromosome view. The lists on the left are tracks
+                          which aren't currently being displayed. You can move tracks from
+                          one side to another, and move the visible tracks up and down the
+                          list to get the set you want.</p>
+                      <p>Within the data track area you can mix DataSets and
+                          DataStores however you wish. DataSets are shown with red names and
+                          DataGroups with blue names.</p>
+                      <p>In addition to the dialog for changing the displayed data
+                          tracks you can also add and remove individual tracks by using the
+                          popup menus available in the <a href="#section3.3"><em>Directory Panel</em></a>.</p>
+                      <h3 id="section3.6">3.6 Status-bar Panel</h3>
+                      <img src="img/fig.3.18.png" alt="" height=21px width=455px>
+                      <p class="imgname">Fig. 3.18 The status bar</p>
+                      <p>The status bar is a notification area which usually shows
+                          relevant information for whatever object your mouse is over at the
+                          time.</p>
+                      <p>Near the right hand end of the status bar is a small graph
+                          showing RED's current memory usage. It is worth keeping an eye on
+                          your memory usage since running out of memory will cause RED to
+                          run very slowly, and eventually to stop altogether.</p>
+                      <p>The memory usage graph is in three parts:</p>
+                      <ul>
+                          <li>The red part indicates the memory currently being used by
+                              RED</li>
+                          <li>The orange part indicates memory which RED has reserved
+                              but isn't currently using</li>
+                          <li>The green part indicates memory which is available to RED
+                              but it isn't using</li>
+                      </ul>
+                      <p>To get an accurate view of the current memory usage you can
+                          double click on this graph which will cause RED to pause and clean
+                          up all of its memory. What you then see will be the actual amount
+                          of memory which is being consumed by the program. At other times
+                          the usage will include inactive memory which RED hasn't got round
+                          to cleaning up.</p>
+                      <p>The percentage value shown is the percentage of total
+                          available memory (green) which is currently being used (red). When
+                          this percentage reaches 90% you will get a warning since you are
+                          coming close to running out of available memory. In this case you
+                          should look at the memory settings and preferences documentation
+                          to see how you can enable more memory or reduce the amount of
+                          memory RED requires.</p>
+                    <p>	At the right hand end of the bar is a small icon which shows
+                          the current status of your disk cache. If this icon is red then
+                          caching is not being used. If it is green then caching is enabled
+                          but inactive. If it is orange then caching is enabled and data is
+                          currently being read from the cache. You can double click on this
+                          icon to turn disk caching on/off, but the change will not take
+                          effect until RED is restarted.</p>
+                      <h1 id="chapter4" class="page-header">4	Filters</h1>
+                    <p>RED implemented a variety of different  types of filters to reduce false positive rate of the RNA-editing sites.<br>
+                        It is worth spending some time looking  through the different filters available. Each filter can be set as your favor.  After each step, a set of candidate sites will be filtered out and these  eliminated sites will be highlighted. Each color stands for one kind of filter.  You can easily undo each step.<br>
+                    With different input data, you will choose <em>de novo</em> mode or Dna/Rna mode.</p>
+                      <h3 id="section4.1">4.1	Reference files used in filters</h3>
+                      <table border="1" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="157" align="center" valign="middle"><p>filter</p></td>
+                          <td width="157" align="center" valign="middle"><p>Reference file    needed</p></td>
+                          <td width="157" align="center" valign="middle"><p>Comment</p></td>
+                          <td width="157" align="center" valign="middle"><p>Websites</p></td>
+                        </tr>
+                        <tr>
+                          <td width="157" align="center" valign="middle"><p>repeatFilter</p></td>
+                          <td width="157" align="center" valign="middle"><p>hg19.fa.out.gz</p></td>
+                          <td width="157" align="center" valign="middle"><p>repeatmasker</p></td>
+                          <td width="157" align="center" valign="middle"><p>http://www.repeatmasker.org/species/hg.html</p></td>
+                        </tr>
+                        <tr>
+                          <td width="157" align="center" valign="middle"><p>comprehensiveFilter</p></td>
+                          <td width="157" align="center" valign="middle"><p>genes.gtf</p></td>
+                          <td width="157" align="center" valign="middle"><p>Gene features</p></td>
+                          <td width="157" align="center" valign="middle"><p>http://genome.ucsc.edu/cgi-bin/hgTables</p></td>
+                        </tr>
+                        <tr>
+                          <td width="157" align="center" valign="middle"><p>dnSNPFilter</p></td>
+                          <td width="157" align="center" valign="middle"><p>dbsnp_138_hg19.vcf</p></td>
+                          <td width="157" align="center" valign="middle"><p>Known snps sites</p></td>
+                          <td width="157" align="center" valign="middle"><p>http://www.ncbi.nlm.nih.gov/SNP/</p></td>
+                        </tr>
+                        <tr>
+                          <td width="157" align="center" valign="middle"><p>P-Value Filter</p></td>
+                          <td width="157" align="center" valign="middle"><p>hg19.txt</p></td>
+                          <td width="157" align="center" valign="middle"><p>Known RNA-editing    sites</p></td>
+                          <td width="157" align="center" valign="middle"><p>http://darned.ucc.ie/static/downloads/hg19.txt</p></td>
+                        </tr>
+                    </table>
+                    <h3 id="section4.2">4.2	<em>Denovo</em> Mode</h3>
+                    <h4>4.2.1	Input Data</h4>
+                    <p>A variant calling format (VCF) file from RNA-seq is necessary. There is no a standard protocol to call sequence variant from RNA-Seq data, although a highly accurate approach termed SNPiR has been presented to identify SNPs in RNA-seq data {Piskol:2013fn} Usually, it takes a few minutes to load bam file, while DNA sequencing data may take more time. We strongly recommend users follow regular format, some weird vcf file can&rsquo;t be resolved correctly. If your vcf file contains more than one sample, please make an annotation before the process. </p>
+                    <h4 id="section4.2.2">4.2.2	Basic Filter</h4>
+                    <p>First, you have to nominate target editing type that you want to study in  . Usually, A-G is recommended.  </p>
+                    <p>Second, site quality and the depth of coverage of site were two key measures to be set up. You can select an upper and a lower limit for the range of values you want to include. If you leave the lower value blank then anything under the upper cutoff will pass. If you leave the upper value blank then anything above the lower cutoff will pass. 	</p>
+                    <ul>
+                      <li>Q: ranging from 1-200 	</li>
+                      <li>Base coverage: ranging from 1-200 </li>
+                    </ul>
+                    <h4>4.2.3	Repeated Filter </h4>
+                    <p>Some repeated positions in DNA/RNA have not been proved to be functional, so we consider them as less useful. We will filter out bases located in such regions. However, SINA/Alu region is supposed to be somewhat functional, bases located in it will be remained . </p>
+                    <h4>4.2.4	Comprehensive Filter </h4>
+                    <p>On the both edges of each read, bases seems to be with lower quality and mapping can be possibly wrong. As a result, we will filter out intronic sites within 4 bp of splice junction, which is supposed to be unreliable.  Users can set the number of bases on the splice junction. 4 is by default. </p>
+                    <h4>4.2.5	Known SNVs Filter</h4>
+                    <p>A candidate site will be filtered out if it is a known variants. It is a necessary in the analyses.</p>
+                    <h4>4.2.6	Statistical Filter</h4>
+                    <h4>4.2.7	Fisher Exact Test</h4>
+                    <p>First, users need to get R installed, and install the package &ldquo;rjava&rdquo; , and &rdquo;qvalue&rdquo; as below</p>
+                    <p>source (&quot;http://bioconductor.org/biocLite.R&quot;)</p>
+                    <p>biocLite(&quot;qvalue&quot;)</p>
+                    <p><em>Please provide the detail of how fisher exact test was performed. </em></p>
+                    <p>R is efficient in performing statistical tests,. P value will be calculated through rJava, andits threshold can be set by user (default: 0.05). We used false discovery rate (FDR) to correct for multiple testing (q-value). </p>
+                    <h3 id="section4.3">4.3	DNA-RNA Mode </h3>
+                    <p>4.3.1	DNA-RNA </p>
+                    <p>Filter RNA-editing means bases are polymer in RNA while in DNA are not. So we will filter out all sites when DNA and RNA data is the same in one base. </p>
+                    <h4>4.3.2	Likelihood Ratio (LLR) Test </h4>
+                    <p>We used the method in Chepelev {Chepelev:2011ia} to calculate LLR. The ratio between LLR calculated by the current editing level and non-editing level is set by user (while 4 is recommended). The number represent probability ratio which can be calculated as pow(10,number). 4 represent 10000 times and 3 represent 1000 times and so on. The specificity will improve while sensitivity will decline with ratio increasing. </p>
+                    <h1 class="page-header" id="chapter5">5	Reports</h1>
+                    <p>The <a href="#chapter5"><em>Reports</em></a> section allows you to construct a report based on the fiteration and statistical tests illustrated before. The reports are based on probeset/probelists or data from database. There are three ways to present RNA-editing sites, which are Variant Distribution, Sites Distribution and Filter Reports. The report plot can be exported as described in  <a href="#section6.1"><em>Saving Images</em></a> section. If you need more RNA-editing sites information, you can export the result in a text format. </p>
+                    <h3 id="section5.1">5.1	Variant distribution (in a karyogram view)</h3>
+                    <p>Viriant distribution plot shows all RNA-editing variant type information when given a probelist. Shown as follow.</p>
+                    <p><img src="img/fig.5.1.png" width="645" height="483"></p>
+                    <p class="imgname">Fig. 5.1 Variant type distribution count</p>
+                    <p>Double-click the highlighted block shows the details of RNA-editing sites.</p>
+                    <p><img src="img/fig.5.2.png" width="500" height="350"></p>
+                    <p class="imgname">Fig. 5.2 Details for highlighted block</p>
+                    <p>You can also save the plot by clicking &lsquo;save&rsquo; button and export all RNA-editing sites information by clicking &lsquo;Export Data&rsquo; button.</p>
+                    <h3 id="section5.2">5.2	Sites Distribution</h3>
+                    <p>Sites distribution plot shows all candidate RNA-editing sites that distributed in the chromosome and their corresponding coordinates.</p>
+                    <p><img src="img/fig.5.3.png" width="641" height="480"></p>
+                    <p class="imgname">Fig. 5.3 Sites distribution count</p>
+                    <p>Double-click the highlighted block shows the details of RNA-editing sites, like Fig. 5.2.</p>
+                    <h3 id="section5.3">5.3	Filter Reports</h3>
+                    <p>We also present the results in a text format. Information about the potential RNA editing sites are listed, including chromosome, position, id, reference base, alternative base, quality, editing level, p-value, and FDR. The program will query all information about a probelist generated by filter from database and present the result. However, if statistical filter has not been performed, there will not be editing level, p-value and FDR, the value is -1 instead.</p>
+                    <p><img src="img/fig.5.4.png" width="500" height="250"></p>
+                    <p class="imgname">Fig. 5.4 Select a probelist before generating RNA-editing reports</p>
+                    <p>After selecting a probelist which you want to generate a report, press 'OK' button and the report is being generated as the following shown.</p>
+                    <p><img src="img/fig.5.5.png" width="659" height="494"></p>
+                    <p class="imgname">Fig. 5.5 The filter report</p>
+                    <h1 class="page-header" id="chapter6">6	Saving Data </h1>
+                    <h3 id="section6.1">6.1	Saving a Project</h3>
+                    <p>You can choose to save a project at any point. A RED project file is a single file which saves both your data and many of your display preferences so that you can get back to working on your data very quickly.</p>
+                    <p>Data which is stored in a project file is:</p>
+                    <ul>
+                      <li>&bull;The positions of all sequencing reads</li>
+                      <li> The details of your samples </li>
+                      <li>The details of your sample groups </li>
+                      <li>The positions of potential RNA editing sites </li>
+                      <li>	All current probe lists </li>
+                      <li>	The list of currently visible data and feature track </li>
+                      <li>	The current position of the chromosome view </li>
+                      <li>	The current data zoom level </li>
+                      <li>	The current data view (probes+reads, just probes, just reads) </li>
+                    </ul>
+                    <p>Some preferences are not stored in the project file and won't be remembered when the program reopens.</p>
+                    <ul>
+                      <li>	The genome annotation data (this is referenced and will be downloaded from the <a href="http://igv.broadinstitute.org/genomes/genomes.txt"><em>IGV server</em></a> if required)</li>
+                      <li>	The size and layout of the panels in the current display (in case you open the file on a different sized screen) </li>
+                    </ul>
+                    <p>If you have changed any of the details which RED stores in its project file during your session, when you close the program you will be prompted to re-save the project before exiting.</p>
+                    <p><img src="img/fig.6.1.png" width="565" height="118"></p>
+                   <p class="imgname">Fig. 6.1 Save project or not before exiting</p>
+                    <p>You should be aware that because RED has to write out all of the read data when it saves a project that this can take a few minutes to complete if you have several large datasets open.</p>
+                    <h3 id="section6.2">6.2	Saving Images</h3>
+                    <p>You can export images generated in RED into three different graphics formats. To export the graphics you see in the main RED window you can select File &gt; Export Image&hellip; from the main menu and then choose from the Genome View and the Chromosome View.</p>
+                    <p><img src="img/fig.6.2.png" width="571" height="486"></p>
+                  <p class="imgname">Fig. 6.2 Export image of current view</p>
+                    <h4>6.2.1	SVG Images</h4>
+                    <p>SVG images are vector images which means that you can blow them up to any size and they will still look smooth. You can also break them apart and edit the individual components. SVG images can only be viewed and edited by a more limited range of software but these packages can render high-quality bitmap images from the SVG images and these can then be used in publications. We would recommend the free program Inkscape (www.inkscape.org) for editing SVG files, or you could use a commercial package such as Adobe Illustrator.</p>
+                    <h4>6.2.2	EPS Images</h4>
+                    <p>Encapsulated PostScript (EPS) is a DSC-conforming PostScript document with additional restrictions which is intended to be usable as a graphics file format. Simply, an EPS file is a PostScript program, saved as a single file that includes a low-resolution preview &quot;encapsulated&quot; inside of it, allowing some programs to display a preview on the screen. It can be edited by a text editor or any PostScript printer like Adobe Illustrator, Adobe Photoshop.</p>
+                    <h4>6.2.3	PNG Images</h4>
+                    <p>PNG images are the default selection. These are bitmap images, which means that you can only edit them in the same way that you would edit a photograph. You can't make these images any larger and they will be produced initially at the same size as you saw them on screen. They are the equivalent of taking a screenshot. These images can be opened in almost any program which can handle images, but are probably not of sufficient quality to use for publications.</p>
+                    <h3 id="section6.3">6.3	Saving Text</h3>
+                    <p>When you generate a report or a probe list you can choose to save this. All text based exports in RED are written out as tab-delimited text files. Although you can open these in any text editor you can also open them directly in a spreadsheet application which should recognise them and import them whilst keeping the structure of the original table.</p>
+                    <h1 class="page-header" id="chapter7">7	Configuration</h1>
+                    <h3 id="section7.1">7.1	RED Preferences</h3>
+                    <p>Under <em>Edit &gt; Preferences</em>, you could change preferences that can either improve the running of RED or to make it more suited to the way you work. In most cases, RED will work fine with the default values. If you are unsure about changing a preference then leave it alone. </p>
+                    <p>All of your preferences are stored in a file of 'red_prefs.txt', which is present in the program directory. If you want to completely reset your preferences, you can simply delete this file and a default file will be created when RED is re-run. </p>
+                    <p><img src="img/fig.7.1.png" width="600" height="300"></p>
+                   <p class="imgname">Fig. 7.1 RED preferences</p>
+                    <p>There are four groups of preference settings which can be accessed via the tabs at the top of the window.</p>
+                    <ul>
+                      <li><strong>	Files</strong> - allows you to set the default location where RED will look for different types of files </li>
+                      <li><strong>	Memory</strong> - allows you to change the behaviour of RED to optimise memory usage </li>
+                      <li>	<strong>Network</strong> - allows you to enter settings which may be required to access the internet from your machine </li>
+                      <li><strong>	Updates</strong> - allows you to say whether you want RED to check if it is the latest version available </li>
+                    </ul>
+                    <h4>7.1.1	Files</h4>
+                    <p>You can set locations for eight files. To change these, just press the browse button on the right of each field and select the directory you want. We strongly recommend you to stay default setting. These folders need to be writable by users of the program. </p>
+                    <p>The file locations you can specify are:</p>
+                    <ul>
+                      <li>Project Data Directory</li>
+                    </ul>
+                    <p>The project data directory is the root directory to place your raw data. The following directories are under the project directory. The program firstly will search all data from this directory, and try to find out what you have cached before.</p>
+                    <ul>
+                      <li>	Genome Directory</li>
+                    </ul>
+                    <p>This is the directory under which your genome files will be stored. These are automatically downloaded from the IGV server if your local drive doesn't exist the genome you want.</p>
+                    <ul>
+                      <li>Fasta Directory</li>
+                    </ul>
+                    <p>The fasta directory stores raw reference genome sequence relative to the genome. It can also contain a large amount of data. You may wish to change this to a local drive, or have the same genome folder shared by several users to save on disk space.</p>
+                    <ul>
+                      <li>RNA Directory</li>
+                    </ul>
+                    <p>The RNA directory stores RNA sequence which its format mainly contains bam/sam. The RNA data is essential to find out potential RNA editing sites. It can be used in <em>Denovo</em> or <em>non-Denovo</em> sequencing procedures. It can also contain a large amount of data. You may wish to change this to a local drive, or have the same genome folder shared by several users to save on disk space.</p>
+                    <ul>
+                      <li>DNA Directory</li>
+                    </ul>
+                    <p>The DNA directory stores DNA sequence which its format mainly contains bam/sam. The DNA data is essential if we perform non-Denovo sequencing procedure. It can also contain a large amount of data. You may wish to change this to a local drive, or have the same genome folder shared by several users to save on disk space.</p>
+                    <ul>
+                      <li>Annotation Directory</li>
+                    </ul>
+                    <p>It may store a variety of annotation files which can be imported into custom annotation tracks. The track will be displayed in the future version.</p>
+                    <ul>
+                      <li>Others Directory</li>
+                    </ul>
+                    <p>This directory saves some fragmentary files like 'cytoband.txt' from genome file.</p>
+                    <ul>
+                      <li>Temp Directory</li>
+                    </ul>
+                    <p>The temp directory stores temporary cache file for data sets. The directory will be cleared when the program is closed.</p>
+                    <h4>7.1.2	Memory</h4>
+                    <p>&bull;	Disk caches</p>
+                    <p> Large datasets come with huge amounts of mapped position data, which  can consume large amounts of memory whilst being idle for most of the time. You can choose to save this data to cache files on disk to free up active memory. The cost for this is that every time you want to refer back to the data there will be a delay whilst the data is retrieved from disk. This will happen when you switch the genome view between chromosomes, or when you perform an operation such as filtering which needs to read through all of the data.</p>
+                    <p>You need to tell RED which directory you want to use to save this data. Changes to the caching options will not have any effect until RED is restarted.</p>
+                    <p>&bull;	File Compression</p>
+                    <p>By default RED saves its data in a text based format which is quick to read, but is not designed to be a very compact format. If you choose to turn on file compression then all of your RED output files will be gzip compressed as they are written. This will reduce the filesize of your output by a factor of about 3, but will increase the time to save data by a factor of about 2. Loading of compressed files is only marginally slower than uncompressed files.  </p>
+                    <h4>7.1.3	 Network  </h4>
+                    <p>If you was not able to access the internet directly, you may set up a proxy server by yourself. Since RED requires access to the network to be able to download genome annotation files, it needs to know if your network requires a proxy. If your network uses a proxy, you need to fill in the HTTP proxy server and HTTP proxy port boxes. The name of the server should be provided without an 'http://' prefix. If you don't use a proxy then the server box should be empty (it doesn't matter what is in the port box in this case). </p>
+                    <p>The final option is to specify a location for the RED data server. Although it is possible for sites to run their own data servers this is not likely to be common and you should leave this alone unless you are absolutely sure that you need to change it. </p>
+                    <h4>7.1.4	Updates  </h4>
+                    <p>RED is under continual development and regular new releases will add new features and fix bugs which have been reported. It is a good idea to keep RED updated to the latest version to ensure you are benefitting from these development efforts. </p>
+                    <p>By default every time RED is started it will check back with its download server to see if a newer version of the program is available. If a newer version has been released you will be informed of this - no change will be made to your existing program. To install the newer version you simply go back to the project website at <a href="https://github.com/iluhcm/REDetector">https://github.com/iluhcm/REDetector</a> and download the update.</p>
+                    <p> If you do not want RED to check for updates then simply untick the &quot;Check for program updates on startup&quot; box in the updates preferences. </p>
+                    <h3 id="section7.2">7.2	Memory Settings  </h3>
+                    <p>RED works with very large data sets (genome annotations, reference sequence and sequence alignment/map data), and it therefore requires a large amount of RAM. </p>
+                    <p>Whilst most aspects of the program can be altered from within RED itself, the total amount of memory available to the program is determined when it is started. The RED launcher program will try to determine the optimal amount of memory to assign to RED when it starts, but in some cases, you may need to take steps to adjust this. </p>
+                    <h4>7.2.1	General Limitations </h4>
+                    <p>The default configuration of RED is to assign the program 2/3 of the physical memory installed on your machine  . Thus on a machine with 6GB of RAM, 4GB will be allocated to RED. Because of overheads in Java itself the amount of available memory reported in the welcome screen will be around 80% of the originally allocated memory. </p>
+                    <p> This default allocation is then limited in some cases. If you are running a 32 bit operating system, or a 64 bit operating system but a 32 bit version of java then the maximum memory allocation is limited to 1.5GB, however much RAM is installed  . If you want to make use of more memory than this you will need a 64 bit OS and version of java. On 64 bit machines running 64 bit java the top memory limit for RED is 8GB, and it's unlikely that you'll benefit from using more than that. </p>
+                    <p>You can manually set the RED memory allocation by yourself. </p>
+                    <h4>7.2.2	Windows and Linux </h4>
+                    <p>Changing the memory allocation in windows or linux is as simple as passing an extra parameter when launching the program. Instead of starting RED by just running 'red' you would run 'red -m XXXX' where XXXX is the amount of memory (in MB) you want to use. </p>
+                    <h4>7.2.3	OS X</h4>
+                    <p>RED on OS X is distributed as an application bundle, inside which is the configuration file which determines the amount of available memory. To change this do the following:</p>
+                    <ul>
+                      <li>	Find the RED application in the Finder. </li>
+                      <li>	Control-click on the application and select &quot;Show package Contents&quot; </li>
+                      <li>	Double click on the contents folder </li>
+                      <li>	Double click the Info.plist file (this will open an application called Property List Editor. </li>
+                      <li>	Look for the line which says 'executable file' </li>
+                      <li>	Edit the value from 'red' to 'red -m XXXXX' where XXXXX is the amount of memory (in B) you want to use. </li>
+                      <li>	Once you've finished, select File &gt; Save to save your changes and then quit PropertyListEditor. </li>
+                      <li>	Restart RED and the new memory limits will be used. </li>
+                    </ul>
+                    <h1 class="page-header" id="chapter8">8	Reporting Bugs</h1>
+                    <p>If you find a problem with RED, please try the following steps:</p>
+                    <ul>
+                      <li>	Check our help content to see if there is a solution already listed </li>
+                      <li>	Check that you are running the latest version of RED. You can see the version you are running by selecting Help &gt; About and you can check RED website to see what the latest version is </li>
+                      <li>	If the problem still remains, report a bug! </li>
+                    </ul>
+                    <p>The easiest way to report a bug is to use our online bug reporting and tracking system at <a href="https://github.com/iluhcm/REDetector/issues">https://github.com/iluhcm/REDetector/issues</a>. Alternatively, you can email the report to sam.lxing@gmail.com.</p>
+                    <p>We'd like to hear suggestions for new functionality you would like to see in RED, or ways in which we could improve the usability of the functions which are already there. You can let us know about these by filing them as a bug with a severity of 'enhancement'.</p>
+                    <h1 class="page-header" id="chapter9">9	Credits</h1>
+                    <p>RED is a free software, and you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version .</p>
+                    <p>SeqMonk &amp; Intergrative Genome Viewer (IGV)</p>
+                    <p>We thank <a href="http://www.bioinformatics.babraham.ac.uk/projects/seqmonk/"><em>SeqMonk</em></a> (http://www.bioinformatics.babraham.ac.uk/projects/seqmonk/) and <a href="http://www.broadinstitute.org/igv/"><em>IGV</em></a> (http://www.broadinstitute.org/igv/). The framework of the GUI in RED is based on SeqMonk, whose GUI is very brief and operating efficiency is fairly high. Meantime, the genome annotation data (mainly referred to gene.txt/gene.gtf) in <a href="#section3.5.1"><em>Feature Track</em></a> is obtained from <a href="http://igv.broadinstitute.org/genomes/genomes.txt">genome server</a> of IGV when there is no genome file in the local host.</p>
+                    <p>Xing Li: design the software framework, implement layout, present graphic and text output for RNA editing sites, and prepare the software document.</p>
+                    <p>Di Wu: desigh the software framework, implement multiple filters and formal statistical tests in the software, and perform data analysis.</p>
+                    <p>Qi Pan: prepare RNA-seq and WES data for RNA editing sites analyses</p>
+                    <p>Yongmei Sun: design the software framework, and supervise the project.</p>
+                    <p>Keyue Ding: conceive and design the project, prepare the software document, and perform data analysis, and supervise the project.              </p>
+                </div>
+              </div>
+              <!-- 分栏 内容主体完 -->
+          </div>
+  
+      </div>
+  
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script
+          src="http://cdn.bootcss.com/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  
+      <!-- Analytics================================================== -->
+      <script type="text/javascript">
+          var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://"
+                  : " http://");
+          document
+                  .write(unescape("%3Cscript src='"
+                          + _bdhmProtocol
+                          + "hm.baidu.com/h.js%3F3d8e7fc0de8a2a75f2ca3bfe128e6391' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      
+     <script type="text/javascript">
+     function show(id){
+         var panel_flag = "#panel"+id;
+         var collapse_flag = "#collapse"+id;
+         $(panel_flag).addClass("in");
+         $(collapse_flag).addClass("in");
+         }
+        function hide(id){
+         var panel_flag = "#panel"+id;
+         var collapse_flag = "#collapse"+id;
+         $(panel_flag).removeClass("in");
+         $(collapse_flag).removeClass("in");
+        }	  
+   </script>
+  </body>
+  </html>

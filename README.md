@@ -1,4 +1,4 @@
-# [RED](iluhcm.github.io)
+# [RED](http://iluhcm.github.io)
 
 RED(RNA Editing Detector) is a program to detect and visualize RNA editing events at genomic scale using next-generation sequencing data. RNA editing is one of the post- or co-transcriptional processes with modification of RNA nucleotides from their genome-encoded sequence. In human, RNA editing event occurs mostly by deamination of adenosine to inosine (A-to-I) conversion through ADAR enzymes. 
 
@@ -19,7 +19,7 @@ The main characteristics of this software are:
   - Likelihood Ratio Test Filter;
 6. Visualization of editing sites with each step’s filter.
 
-To get started, check out <iluhcm.github.io>!
+To get started, check out <http://iluhcm.github.io>!
 
 ## Table of contents
 
@@ -63,7 +63,7 @@ Have a bug or a feature request? Please first read the [issue guidelines](https:
 
 ## Documentation
 
-RED's documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <iluhcm.github.io>. The docs may also be run locally.
+RED's documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://iluhcm.github.io>. The docs may also be run locally.
 
 ### Contents of documentation
 
@@ -79,7 +79,7 @@ The documentation contains following sections:
 - Reporting Bugs
 - Credits
 
-Please move to pages at <iluhcm.github.io/> for more information.
+Please move to pages at <http://iluhcm.github.io> for more information.
 
 ### Documentation for previous releases
 
