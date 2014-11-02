@@ -345,7 +345,7 @@
     platforms, Windows and MacOS. To download <em>R</em>, please choose your
     preferred<em> <a href="http://cran.r-project.org/mirrors.html">CRAN mirror</a></em><a href="http://cran.r-project.org/mirrors.html"></a>. </p>
 
-<p>The package of “rJava” in <em>R</em> is required,
+<p>The package of "rJava" in <em>R</em> is required,
     which ensures connection between <em>R</em> and Java. Open a <em>R</em> Window and
     type:</p>
 
@@ -782,6 +782,7 @@
 <p>Right-clicking on an entry in this folder brings up a popup
     menu with the following options:</p>
 <ul>
+
     <li>Show Track in Chromosome View</li>
 </ul>
 <p>
@@ -881,7 +882,7 @@
 <h3 id="section3.5">3.5 Chromosome Panel</h3>
 
 <p>The chromosome panel is the most complex view in RED and is
-    also where you’re likely to pay the most of your attention to.
+    also where you're likely to pay the most of your attention to.
     There are a lot of options for changing the information which it
     showed to you.</p>
 <img src="img/fig.3.9.png" alt="" name="fig_3_9" width=720 height=197 id="fig_3_9">
@@ -1174,10 +1175,10 @@
 
 <h3 id="section4.3">4.3 DNA-RNA Mode </h3>
 
-<p>4.3.1 DNA-RNA </p>
+<p>4.3.1 DNA-RNA</p>
 
 <p>Filter RNA-editing means bases are polymer in RNA while in DNA are not. So we will filter out all sites when DNA and RNA data is the same in one base. </p>
-<h4>4.3.2 Likelihood Ratio (LLR) Test </h4>
+<h4>4.3.2 Likelihood Ratio (LLR) Test</h4>
 
 <p>We used the method in Chepelev {Chepelev:2011ia} to calculate LLR. The ratio between LLR calculated by the current editing level and non-editing level is set
     by user (while 4 is recommended). The number represent probability ratio which can be calculated as pow(10,number). 4 represent 10000 times and 3 represent
@@ -1278,12 +1279,14 @@
 <p><img src="img/fig.6.2.png" width="571" height="486"></p>
 
 <p class="imgname">Fig. 6.2 Export image of current view</p>
-<h4>6.2.1 SVG Images</h4>
+<blockquote>
+  <h4>6.2.1 SVG Images</h4>
+</blockquote>
 
 <p>SVG images are vector images which means that you can blow them up to any size and they will still look smooth. You can also break them apart and edit the
-    individual components. SVG images can only be viewed and edited by a more limited range of software but these packages can render high-quality bitmap images
-    from the SVG images and these can then be used in publications. We would recommend the free program Inkscape (www.inkscape.org) for editing SVG files, or
-    you could use a commercial package such as Adobe Illustrator.</p>
+  individual components. SVG images can only be viewed and edited by a more limited range of software but these packages can render high-quality bitmap images
+  from the SVG images and these can then be used in publications. We would recommend the free program Inkscape (www.inkscape.org) for editing SVG files, or
+  you could use a commercial package such as Adobe Illustrator.</p>
 <h4>6.2.2 EPS Images</h4>
 
 <p>Encapsulated PostScript (EPS) is a DSC-conforming PostScript document with additional restrictions which is intended to be usable as a graphics file format.
@@ -1384,7 +1387,7 @@
 <p>By default RED saves its data in a text based format which is quick to read, but is not designed to be a very compact format. If you choose to turn on file
     compression then all of your RED output files will be gzip compressed as they are written. This will reduce the filesize of your output by a factor of about
     3, but will increase the time to save data by a factor of about 2. Loading of compressed files is only marginally slower than uncompressed files. </p>
-<h4>7.1.3 Network </h4>
+<h4>7.1.3 Network</h4>
 
 <p>If you was not able to access the internet directly, you may set up a proxy server by yourself. Since RED requires access to the network to be able to
     download genome annotation files, it needs to know if your network requires a proxy. If your network uses a proxy, you need to fill in the HTTP proxy server
@@ -1393,7 +1396,7 @@
 
 <p>The final option is to specify a location for the RED data server. Although it is possible for sites to run their own data servers this is not likely to be
     common and you should leave this alone unless you are absolutely sure that you need to change it. </p>
-<h4>7.1.4 Updates </h4>
+<h4>7.1.4 Updates</h4>
 
 <p>RED is under continual development and regular new releases will add new features and fix bugs which have been reported. It is a good idea to keep RED
     updated to the latest version to ensure you are benefitting from these development efforts. </p>
@@ -1404,7 +1407,7 @@
 
 <p> If you do not want RED to check for updates then simply untick the &quot;Check for program updates on startup&quot; box in the updates preferences. </p>
 
-<h3 id="section7.2">7.2 Memory Settings </h3>
+<h3 id="section7.2">7.2 Memory Settings</h3>
 
 <p>RED works with very large data sets (genome annotations, reference sequence and sequence alignment/map data), and it therefore requires a large amount of
     RAM. </p>
@@ -1412,7 +1415,7 @@
 <p>Whilst most aspects of the program can be altered from within RED itself, the total amount of memory available to the program is determined when it is
     started. The RED launcher program will try to determine the optimal amount of memory to assign to RED when it starts, but in some cases, you may need to
     take steps to adjust this. </p>
-<h4>7.2.1 General Limitations </h4>
+<h4>7.2.1 General Limitations</h4>
 
 <p>The default configuration of RED is to assign the program 2/3 of the physical memory installed on your machine . Thus on a machine with 6GB of RAM, 4GB will
     be allocated to RED. Because of overheads in Java itself the amount of available memory reported in the welcome screen will be around 80% of the originally
@@ -1503,6 +1506,7 @@
 
 
 
+
 </script>
 
 <script type="text/javascript">
@@ -1518,6 +1522,7 @@
          $(panel_flag).removeClass("in");
          $(collapse_flag).removeClass("in");
         }	  
+
 </script>
 </body>
 </html>
